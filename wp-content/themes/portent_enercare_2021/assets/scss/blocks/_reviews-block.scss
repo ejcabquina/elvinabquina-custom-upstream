@@ -1,0 +1,274 @@
+.block-reviews {
+
+	&__glider {
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&__stars {
+		display: flex;
+		margin: 0.563em 0 1em;
+
+		@include media('<=tablet') {
+			margin-top: 0.5em;
+			margin-bottom: 0.25em;
+		}
+	}
+
+	&__star {
+		margin: 0 0.15em;
+		height: 24px;
+		width: 24px;
+
+		&:first-of-type,
+		&:last-of-type {
+			margin: 0;
+
+		}
+	}
+
+	&__score-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 2em 0.5em 0.5em;
+	}
+
+	&__section-heading__score {
+		font-size: clamp(3vw, 9vw, 3rem);
+		height: 100%;
+		display: block;
+		margin-right: clamp(0.75vw, 3vw, 1rem);
+	}
+
+	&__section-heading__stars {
+		justify-content: center;
+
+		img{
+		height: clamp(2rem, 3rem, 2.5rem);
+		width: clamp(2rem, 3rem, 2.5rem);
+		}
+	}
+
+	&__score-star-container {
+		border-left: 1px solid gray;
+		padding-left: clamp(0.75vw, 2vw, 1em);
+
+		&:before {
+			background-color: gray;
+			content: "";
+			display: block;
+			height: 100%;
+			width: 1px;
+		}
+	}
+
+	&__score-star-container {
+		
+		span {
+			display: block;
+			font-weight: 700;
+		}
+	}
+
+	&__section-heading {
+		background-color: $white;
+		display: flex;
+		flex-basis: 75%;
+		padding: 0 1em;
+		align-items: center;
+		flex-direction: column;
+		@include large-font-style();
+		position: relative;
+
+		@include media('>=desktop') {
+			flex-direction: row;
+			padding: 0 1em;
+		}
+
+		@include media('<desktop', '>phone' ) {
+			flex-direction: row;
+			padding: 0 0.5em;
+		}
+
+		&__title {
+			flex-basis: 75%;
+			flex-grow: 1;
+			margin-top: 1.5em;
+			padding-bottom: 1em;
+			text-align: center;
+			z-index: 1;
+			font-size: 16px;
+
+			@include media('>=tablet') {
+				margin-top: 0;
+				padding-bottom: 0;
+			}
+		}
+
+		&__header {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		&__stars {
+			display: flex;
+			margin-right: 0.5em;
+
+			@include media('>=tablet') {
+				vertical-align: sub;
+			}
+		}
+	}
+
+	&__section-footer {
+
+		text-align: center;
+
+		&__add-review,
+		&__see-reviews {
+			margin: 0.5em;
+		}
+	}
+
+	&__stamp {
+		transform: scale(1);
+		z-index: 1;
+
+		@include media('>=tablet') {
+			transform: scale(1.2);
+		}
+	}
+
+	&__wrapper {
+		padding: 0 3vw;
+		position: relative;
+		max-width: 100%;
+		overflow-x: hidden;
+
+		@include media('>=tablet') {
+			padding: 32px 0;
+			overflow-x: visible;
+		}
+	}
+
+	&__dots {
+
+		margin: 1.5em 0 1em;
+		flex-wrap: nowrap;
+
+		button {
+			background-color: $grey_3;
+			margin: 0 0.4em 0.5em;
+
+			@include media('>=tablet') {
+				margin: 0 0.75em 0.5em;
+			}
+		}
+
+		button.active {
+			background-color: brand-color('red');
+		}
+	}
+
+	&__prev,
+	&__next {
+		background-color: transparent;
+		border: 1px dotted transparent;
+		height: 50px;
+		opacity: 1;
+		transition: opacity 0.3s ease-in;
+		width: 50px;
+		border-radius: 100%;
+		visibility: visible;
+
+		img {
+			margin: 0 auto;
+		}
+
+		&:hover {
+			background-color: $grey_2;
+			transition: background-color 0.3s ease-in;
+		}
+
+		&:focus {
+			border: 1px dotted $grey_8;
+		}
+
+		&.disabled {
+			opacity: 0.3;
+			transition: opacity 0.3s ease-in;
+		}
+
+		@include media('<=phone') {
+			display: none;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: space-around;
+		position:relative;
+	}
+
+	&__review {
+		background-color: #fff;
+		border: 2px solid $grey_5;
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: 1em 52px 1em 24px;
+		margin: 0 0.35em;
+
+		@include media('<=phone') {
+			
+		}
+
+		&__content {
+			font-size: 1em;
+			flex-grow: 1;
+			margin: 0.025em 0;
+
+      img {
+        max-width: 1em;
+      }
+
+			&:before,
+			&:after {
+				content: '"';
+			}
+		}
+
+		&__reviewer {
+			display: block;
+			@include large-font-style();
+			font-weight: 700;
+			margin: 0.025em 0 0.015em;
+			text-transform: capitalize;
+		}
+
+		&__date {
+			display: block;
+			margin: 0.015em 0 0;
+			font-size: 14px;
+		}
+
+		.block-reviews__stars {
+			margin-bottom: 15px;
+
+			@include media('<=tablet') {
+				margin-top: 1.5em;
+				margin-bottom: 0.75em;
+			}
+		}
+
+		.block-reviews__star {
+			height: 20px;
+			width: 20px;
+		}
+	}
+}

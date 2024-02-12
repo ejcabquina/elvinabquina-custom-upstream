@@ -1,0 +1,9 @@
+.has-focus-style--black{outline-color:#000 !important}
+.has-focus-style--white{outline-color:#fff !important}
+.has-focus-style--red{outline-color:#da1b27 !important}
+.has-focus-style *:focus{outline:2px dotted;outline-color:inherit}
+.wp-block-cover__inner-container{margin:calc(2 * 20px) calc(50% - 50vw);max-width:1168px;width:auto}
+.wp-block-cover .block-card.has-black-background-color{background-color:rgba(0,0,0,.8)}
+@media(min-width:768px){.wp-block-cover__inner-container{margin:calc(2 * 20px) calc(25% - 25vw)}
+}@media(max-width:767px){.wp-block-cover{background-color:#000}
+}

@@ -1,0 +1,93 @@
+/* X-Small
+--------------------------------------------- */
+.wp-block-button {
+
+}
+
+.wp-block-button__link {
+	display: inline-flex;
+	align-items: center;
+
+	img {
+		margin: 0 0.25em;
+		height: 24px;
+		//marked important to preserve theme
+		width: 24px !important;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.is-style-x-small {
+
+	.wp-block-button {
+
+		&__link {
+			background-color: $grey_1;
+			color: $black;
+			font-weight: 300;
+			padding: 4px 8px;
+			height: 1.875em;
+			font-size: 16px;
+
+			&:hover {
+				background-color: $grey_4;
+				color: $black
+			}
+		}
+	}
+}
+
+/* Small
+--------------------------------------------- */
+
+.is-style-small {
+
+	.wp-block-button {
+
+		&__link {
+			padding: 6px 16px;
+		}
+	}
+}
+
+/* Featured
+--------------------------------------------- */
+
+.wp-block-button {
+
+	$featured-button: &;
+
+	&.is-style-featured {
+		#{$featured-button}__link {
+			line-height: 24px;
+			font-size: 18px;
+			padding: 12px 24px;
+			border-radius: 1.563em;
+		}
+	}
+}
+
+/* Hero
+--------------------------------------------- */
+
+.wp-block-button {
+
+	$hero-button: &;
+
+	&.is-style-hero {
+
+		#{$hero-button}__link {
+			@include font-sizes(1.250em, 1.5em, 1.5em);
+			line-height: 2.000rem;
+			padding: 16px 48px 13px;
+			border-radius: 2.25em;
+
+			@include media('<tablet') {
+				line-height: 1.5rem;
+			}
+		}
+	}
+}

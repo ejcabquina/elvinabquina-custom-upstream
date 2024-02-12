@@ -1,0 +1,371 @@
+/* Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+	background: $white;
+	border-bottom: 1px solid $border-color;
+	position: relative;
+	padding: 10px 0;
+	box-shadow: 0 2px 7px rgba(0,0,0,0.5);
+	z-index: 5;
+	position: relative;
+	width: 100vw;
+
+	@include media(">mobile_menu") {
+		padding: 0;
+	}
+	.wrap {
+		width: 100%;
+		@include media(">mobile_menu") {
+			display: flex;
+			align-items: center;
+			flex-wrap: nowrap;
+			position: relative;
+		}
+	}
+}
+
+.page-no-main-nav {
+
+	.site-header {
+		padding: 1em 0;
+	}
+
+	.header-phone {
+		border-left: none;
+	}
+}
+
+.header-phone {
+	@include media(">desktop") {
+		border-left: 1px solid brand-color("grey-20");
+		padding-left: 1.25rem;
+		text-align: right;
+	}
+
+	&__link {
+		display: flex;
+		margin-right: 1.5rem;
+		text-decoration: none;
+		font-weight: 700;
+
+		@include media(">mobile_menu") {
+			margin-right: 0;
+		}
+
+		&:focus,
+		&:hover {
+			background-color: $grey_1;
+		}
+
+		&:focus {
+			outline: 2px dotted $black;
+		}
+	}
+	&__number,
+	&__cta {
+		display: none;
+
+		@include media(">mobile_menu") {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+
+	&__number {
+		@include media(">desktop") {
+			font-size: 1.25rem;
+		}
+
+		@include media("<=mobile_menu") {
+			display:none;
+			visibility:hidden;
+		}
+	}
+
+	svg {
+		fill: currentColor;
+	}
+}
+
+.title-area {
+	width: 100%;
+	max-width: 10.75rem;
+	text-align: left;
+	margin-right: auto;
+
+	h1.site-title,
+	p.site-title {
+		margin: 0;
+		font-size: 24px;
+		line-height: 30px;
+
+		padding: 8px;
+
+		a {
+			color: $base-color;
+			text-decoration: none;
+		}
+	}
+
+	/*
+	.site-title a {
+	  	background: url(../icons/logo.svg) no-repeat center;
+	  	background-size: contain;
+		display: block;
+		text-indent: -9999em;
+		width: 100%;
+		height: 0;
+		padding-bottom: 139px / 623px * 100%;
+	}
+*/
+
+	@include media("<=mobile_menu") {
+		text-align: center;
+
+		.site-title a {
+			padding-bottom: 0;
+			height: 48px;
+			background-size: auto 42px;
+		}
+    img {
+      max-height: 38px;
+    }
+	}
+}
+
+/* Header Review Stars
+--------------------------------------------- */
+ .global-reviews-banner {
+	margin-right:1.5%;
+	border-radius:10px;
+}
+.global-reviews-banner__stars {
+	display: flex;
+	justify-content:center;
+}
+
+.global-reviews-banner__stars img {
+	filter: invert(19%) sepia(78%) saturate(2686%) hue-rotate(340deg) brightness(100%) contrast(108%);
+}
+
+.global-reviews-banner__count {
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+/* Admin Bar
+--------------------------------------------- */
+
+@include media(">782px") {
+	.admin-bar .site-container {
+		padding-top: 32px;
+	}
+}
+
+@include media("<=782px") {
+	#wpadminbar {
+		display: none !important;
+	}
+}
+
+/* Top bar
+--------------------------------------------- */
+
+.top-bar {
+	background-color: brand-color("grey-20");
+	display: none;
+	padding: 0.75rem 0;
+
+	@include media(">mobile_menu") {
+		display: flex;
+	}
+
+	.wrap {
+		justify-content: space-between;
+	}
+
+	&__nav {
+		flex-grow: 1;
+		.menu {
+			display: flex;
+
+			li {
+				&:not(:last-of-type) {
+					margin-right: 1rem;
+				}
+			}
+		}
+		a {
+			color: $grey_11;
+
+			&:hover,
+			&focus {
+				text-decoration: underline;
+			}
+
+			&:focus {
+				border: 1px dotted $black;
+			}
+		}
+	}
+
+	.search-form {
+		margin-left: auto;
+		flex-basis: 25%;
+
+		@include media(">=desktop") {
+			flex-basis: 36%;
+		}
+	}
+}
+
+/**
+Appointment Banner
+ */
+.appointment-banner {
+
+	$appointment-banner: &;
+	position: absolute;
+	background-image: url(../img/apt-bkgd-gry.svg);
+	background-size: cover;
+	background-position: center top;
+	background-color: transparent;
+	display: flex;
+	top: 0;
+	left: 50%;
+	z-index: 10;
+	padding: 1em 0;
+	transform: translateX(-50%);
+	align-items: center;
+	height: 60px;
+	justify-content: center;
+	max-width: calc( 98% - 80px );
+	width: 100%;
+	line-height: 22px;
+
+	@include media('>phone') {
+		max-width: 496px;
+	}
+
+	&:before,
+	&:after {
+		content: '';
+		display: inline-block;
+		background-image: url(../img/apt-bkgd-gry.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 40px;
+		height: 60px;
+		position: absolute;
+		z-index: 10;
+	}
+
+	&:before {
+		left: 0;
+		transform: translateX(-100%);
+	}
+
+	&:after {
+		right: 0;
+		transform: translateX(100%);
+		background-position: 100% 0;
+	}
+
+	&__icon {
+		margin:0 0.5em 0 0;
+		height: 24px;
+		width: 24px;
+		line-height: 22px;
+		align-self: center;
+
+		@include media('<=tablet') {
+			display: none;
+		}
+	}
+
+	&__title {
+		display: block;
+		font-weight: bold;
+		line-height: 22px;
+		color: $black;
+		align-self: flex-end;
+		@include font-sizes(1em);
+
+		@include media('<=tablet') {
+			margin-right: 0.5em;
+			text-align: center;
+		}
+	}
+
+	&__link {
+		background-color: brand-color('red');
+		border: 1px solid transparent;
+		color: $white;
+		padding: 6px 16px 3.5px;
+		border-radius: $border-radius;
+		text-decoration: none;
+		margin: 0 0 0 1em;
+		align-self: flex-start;
+		font-weight: 700;
+		transition: background-color 0.2s ease;
+		line-height: 22px;
+
+		@include font-sizes(1em);
+
+		@include media('<=tablet') {
+			margin: 0;
+			width: 50%;
+			border-radius: 30px;
+			text-align: center;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: brand-color( 'red', 'darken' );
+			transition: background-color 0.3s ease;
+		}
+
+		&:focus {
+			border: 1px dotted brand-color( 'red', 'lighten' );
+		}
+
+		&::before {
+			content: "";
+		    display: block;
+		    position: absolute;
+		    width: calc(100% + 80px); //Consider the "fins" in the width calculation
+		    height: 100%;
+		    top: 0;
+		    left: -40px; //Consider the left fin when positioning
+		}
+	}
+
+	/**
+	Emergency Styles
+	 */
+
+	&--emergency {
+		background-image: url(../img/apt-bkgd-red.svg);
+
+		&:before,
+		&:after {
+			background-image: url(../img/apt-bkgd-red.svg);
+		}
+
+		#{$appointment-banner}__title {
+			color: $white;
+		}
+
+		#{$appointment-banner}__link {
+			background-color: $white;
+			color: $base-color;
+
+			&:hover,
+			&:focus {
+				background-color: $black;
+				color: $white;
+			}
+		}
+	}
+}

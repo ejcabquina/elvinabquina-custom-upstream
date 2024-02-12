@@ -1,0 +1,117 @@
+.block-emc-card {
+	background-color: $white;
+	border: none;
+	box-shadow: 0 4px 8px 0 rgba(56,61,67,0.30);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 8%;
+	height: 100%;
+
+	&__image {
+		border-radius: 100%;
+		margin: 0 2.75em 1.5em;
+		width: 90%;
+
+		@include media(">=tablet") {
+			margin: 0 3.125em 1.5em;
+			width: 75%;
+			max-width: 172px !important;
+			height: auto;
+		}
+	}
+
+	h3 {
+		font-size: 20px;
+		margin-bottom: 0;
+	}
+
+	&__text {
+		font-weight: 300;
+	}
+
+	&__content {
+		background-color: $white;
+		height: 100%;
+		left: 0;
+		padding: 1em;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		transition: top 0.35s ease-out, visibility 0.35s ease, opacity 0.2s ease;
+		visibility: visible;
+		opacity: 1;
+
+		&[aria-hidden="true"] {
+			visibility: hidden;
+			top: 100%;
+			transition: top 0.4s ease-in, visibility 0.4s ease, opacity 0.15s ease;
+			opacity: 0;
+		}
+	}
+
+	&__link {
+		padding-bottom: 0.25em;
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__bio-header {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 0 24px 0 0;
+		margin-bottom: 1em;
+
+		&__image {
+			border-radius: 100%;
+			height: 50px;
+			width: 50px;
+			margin: 0 .5em 0 0.25em;
+		}
+	}
+
+	&__close-button {
+		border: none;
+		background-color: transparent;
+		border-radius: 100%;
+		position: absolute;
+		padding: .5em;
+		right: .5em;
+		top: .5em;
+
+		&:hover,
+		&:focus {
+			background-color: $grey_2;
+		}
+
+		&:focus {
+			border: 1px dotted $grey_8;
+		}
+
+		img {
+			height: 15px;
+			width: 15px;
+		}
+	}
+
+	.wp-block-button__link {
+		margin-top: 1.5em;
+	}
+
+	button {
+		border: 0;
+	}
+}
+
+/**
+Provision for use within the carousel block
+ */
+.block-carousel__wrapper .block-emc-card__wrapper {
+	margin: 0 .75em;
+}

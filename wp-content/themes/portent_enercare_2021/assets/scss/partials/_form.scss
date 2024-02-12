@@ -1,0 +1,899 @@
+/* Forms
+--------------------------------------------- */
+$field-height: 42px;
+
+input, select, textarea {
+	background: $white;
+	border: 1px solid $border-color;
+	border-radius: 4px;
+	color: $base-color;
+	font-size: 18px;
+	height: $field-height;
+	line-height: 24px;
+	padding: 14px 16px;
+	width: 100%;
+}
+
+select {
+	line-height: 54px;
+	padding: 6px 16px;
+}
+
+textarea {
+	width: 100%;
+}
+
+@include placeholder-color( #000000 );
+
+/* Gravity Forms Styles
+--------------------------------------------- */
+.gform_fullwidth {
+  .gform_wrapper {
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+
+.gform_wrapper {
+	margin: 0 auto;
+	width: 95%;
+
+	@include media( '>=desktop') {
+		width: 54%;
+	}
+
+	.ginput_container_consent {
+		display: flex;
+		justify-content: flex-start;
+
+		input[type=checkbox] {
+			max-width: 25%;
+			margin: 0;
+			width: 1em;
+		}
+
+		.gfield_consent_label {
+			align-self: center;
+			margin-left: 0.5em;
+		}
+	}
+
+	.ginput_container_fileupload {
+
+		input[type=file] {
+			padding: 0.3em;
+			font-size: 1em;
+		}
+	}
+
+	// Submit Button Style
+	.gform_footer {
+
+		input[type=submit] {
+			width: 140px;
+			border-radius: 30px;
+			font-size: 1rem;
+			font-weight: 700;
+			line-height: 22px;
+			padding: 5px 16px;
+			text-decoration: none;
+			background-color: brand-color('red');
+			color: $white;
+      		cursor: pointer;
+
+			@include media(">=desktop") {
+				padding: 8px 24px;
+				border-radius: $border-radius;
+				margin-top: 0em;
+			}
+		}
+	}
+}
+
+.gform_confirmation_message {
+	border: 2px solid brand-color('red');
+	padding: 2em;
+	margin: 5em auto;
+	max-width: $content-width;
+	text-align: center;
+	position: relative;
+	font-weight: 700;
+	@include font-sizes(1.2em);
+}
+
+.gform_submission_error.gform_submission_error_header,
+.form-error {
+	font-size: 1em;
+	line-height: 1.25;
+	margin-bottom: 0;
+	color: $form-error-color;
+	font-weight: 400;
+}
+
+.has-errors .form-error {
+	display: block;
+}
+
+.form-error {
+	display: none;
+	margin: 5px 0;
+	padding: 5px;
+	background-color: $form-error-background;
+	border: 1px solid $form-error-color;
+}
+
+.ginput_container_checkbox {
+
+	.gchoice {
+		display: flex;
+		align-items: center;
+		height: $field-height;
+	}
+
+	input[type="checkbox"] {
+		flex-grow: 0;
+		height: auto;
+		width: auto;
+		margin: 0 0.5em 0 0;
+	}
+}
+
+/**
+Form Style Helpers
+ */
+.form-section--dark,
+.form-group--dark {
+	background-color: brand-color('black');
+	color: #fff;
+
+	* {
+		color: inherit;
+	}
+
+	input[type="text"], select, textarea {
+		color: brand-color('black');
+	}
+
+	.gform_wrapper.gravity-theme .ginput_counter {
+		color: #fff;
+	}
+
+	a,
+	a:active,
+	a:visited,
+	.gform_wrapper .gfield_required {
+		color: brand-color('light-red');
+	}
+
+	a:hover,
+	a:focus {
+		color: brand-color('lighter-red');
+	}
+
+	a:focus {
+		outline: 2px dotted #fff;
+	}
+
+	input[type=submit]:focus,
+	input:focus,
+	select:focus,
+	textarea:focus,
+	.gform_wrapper.product-form_wrapper .product-form .gform_footer input[type="submit"]:focus{
+		outline: 2px dotted #fff;
+	}
+}
+
+.paginated-form-cover--dark {
+
+	&.wp-block-cover {
+		background-color: #fff;
+	}
+
+	.gform_wrapper.callback-form_wrapper,
+	.gform_confirmation_wrapper.callback-form .gform_confirmation_message{
+		background-color: brand-color('black');
+		color: #fff;
+
+		* {
+			color: inherit;
+		}
+
+		input[type="text"], select, textarea {
+			color: brand-color('black');
+		}
+
+		a,
+		a:active,
+		a:visited,
+		.gform_wrapper .gfield_required {
+			color: brand-color('light-red');
+		}
+
+		a:hover,
+		a:focus {
+			color: brand-color('lighter-red');
+		}
+
+		a:focus {
+			outline: 2px dotted #fff;
+		}
+
+		input[type=submit]:focus,
+		input:focus,
+		select:focus,
+		textarea:focus,
+		.gform_wrapper.product-form_wrapper .product-form .gform_footer input[type="submit"]:focus{
+			outline: 2px dotted #fff;
+		}
+	}
+
+	.gform_wrapper.gravity-theme .ginput_counter,
+	.gf_progressbar_title{
+		color: #fff;
+	}
+
+}
+
+/* Search Form
+--------------------------------------------- */
+
+.search-form {
+	border: 1px solid $border-color;
+	max-width: 400px;
+	position: relative;
+	overflow: hidden;
+
+	.search-field {
+		border: none;
+		padding-right: 44px;
+		width: 100%;
+	}
+
+	.search-submit {
+		background: transparent;
+		border: none;
+		padding: 0;
+		margin: 0;
+		min-width: 0;
+		width: 44px;
+		height: 44px;
+		line-height: 0;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		margin-top: -22px;
+		right: 0;
+
+		svg {
+			fill: $grey_7;
+			@include icon-position( 20px );
+
+			&:hover {
+				fill: $highlight;
+			}
+		}
+
+	}
+}
+
+.search-field__wrapper {
+	position: relative;
+
+	.addsearch-autocomplete__total-results {
+		display:none;
+	}
+
+	.addsearch-searchfield input[type="search"] {
+		padding: 10px 10px 7px 30px;
+		background-image: url(../icons/search/red-search.svg);
+		background-repeat: no-repeat;
+		background-position: 8px 9px;
+		background-size: 16px 16px;
+		border-color: #7F7F7F;
+
+		&:focus {
+			border: 1px solid brand-color('red');
+		}
+	}
+}
+
+
+#addsearch-logo {
+	display: none !important;
+	pointer-events: none !important;
+	visibility: hidden;
+}
+
+.addsearch-autocomplete {
+
+	li {
+		border-bottom: 1px solid $grey_1;
+		padding: 12px 1em;
+		transition: background-color 0.3s ease;
+
+		&:hover,
+		&:focus {
+			background-color: $grey_1;
+			transition: background-color 0.3s ease;
+
+			a {
+				color: brand-color('red');
+			}
+		}
+
+		a {
+			color: $base-color;
+			font-weight: 300;
+			@include font-sizes(1em);
+			text-decoration: none;
+		}
+	}
+}
+
+.search-field__results {
+	background-color: $white;
+	box-shadow: $drop-shadow;
+	position: absolute;
+	z-index: 99;
+}
+
+/* Addsearch Form
+--------------------------------------------- */
+
+.addsearch-container {
+
+	input[type='text'] {
+		padding: 10px 10px 9px 34px;
+		background-image: url(../icons/search/red-search.svg);
+		background-repeat: no-repeat;
+		background-position: 8px 12px;
+		background-size: 16px 16px;
+		font-weight: 300;
+		@include font-sizes(1em);
+		max-width: 90%;
+
+		@include media("<=tablet") {
+			max-width: 74%;
+		}
+	}
+
+	button {
+		position: relative;
+		right: 1%;
+		border-radius: 0 6px 6px 0;
+		font-size: 1.125rem;
+		font-weight: 700;
+		line-height: 24px;
+		padding: 0.5em 1em;
+		text-decoration: none;
+		letter-spacing: -.17px;
+		background-color: brand_color('red');
+		color: $white;
+		border-style: none;
+	}
+}
+
+
+/* Archive Search Form
+--------------------------------------------- */
+
+.wp-block-search {
+
+	.wp-block-search {
+
+		&__inside-wrapper {
+			margin-bottom: 1.5em;
+		}
+
+		&__input {
+			padding: 10px 10px 12px 34px;
+			background-image: url(../icons/search/red-search.svg);
+			background-repeat: no-repeat;
+			background-position: 8px 12px;
+			background-size: 16px 16px;
+			border-style: none;
+			font-weight: 300;
+			@include font-sizes(1em);
+		}
+
+		&__button {
+			margin-left: 0;
+			border-radius: 0 6px 6px 0;
+			font-size: 1.125rem;
+			font-weight: 700;
+			line-height: 24px;
+			padding: 0.5em 1em;
+			text-decoration: none;
+			letter-spacing: -.17px;
+			background-color: brand_color('red');
+			color: $white;
+		}
+	}
+}
+
+
+/* Product Form & Buy/Rent/Rebates Lead Form
+--------------------------------------------- */
+
+.gform_wrapper.product-form {
+
+	&_wrapper {
+
+		.product-form {
+
+
+			.gform_body {
+
+
+				.gform {
+
+					&__disclaimer {
+						width: 100%;
+						font-size: 10px;
+						line-height: 12px;
+
+						@include media(">=tablet") {
+							width: 75%;
+						}
+					}
+				}
+			}
+
+			.gform_footer {
+				display: flex;
+				/*justify-content: flex-end;*/
+
+				input[type=submit] {
+					width: 140px;
+					border-radius: 30px;
+					font-size: 1rem;
+					font-weight: 700;
+					line-height: 22px;
+					padding: 5px 16px;
+					text-decoration: none;
+					background-color: brand-color('red');
+					color: $white;
+
+					&:hover,
+					&:focus {
+						background-color: brand-color('darker-red');
+					}
+
+					&:focus {
+						outline: 2px dotted brand-color('black');
+					}
+
+					@include media(">=desktop") {
+						padding: 8px 24px;
+						border-radius: $border-radius;
+						margin-top: 0em;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+/*  Masthead Form
+--------------------------------------------*/
+
+.gform_wrapper.callback-form {
+
+	position: relative;
+
+	&__header {
+		text-align:center;
+
+		h2 {
+			font-size:2.5em;
+		}
+	}
+
+	&_wrapper {
+		width: 100%;
+		padding: 1.5em;
+		background-color: $white;
+		border-top: 4px solid brand-color('red');
+		color: $black;
+		font-weight: 300;
+
+		.gf_progressbar_title {
+			text-align: right;
+		}
+
+		.gfield_label_before_complex {
+			margin-bottom: 0;
+			line-height: 21px;
+		}
+
+		.gform__disclaimer {
+			@include font-sizes(0.875em);
+		}
+
+		.gfield textarea.large {
+			height: 75px !important; // Override theme form text area height
+		}
+
+		.gform_ajax_spinner {
+			position: absolute;
+			left: 5%;
+			bottom: 5%;
+		}
+
+		.validation_message,
+		.instruction,
+		.gfield_description.validation_message {
+			padding: 0.2em 1.5em;
+			margin-top: 0;
+		}
+
+		select {
+			font-family: $sans-serif;
+		}
+
+		.ginput_container {
+			.validation_message,
+			.instruction,
+			.gfield_description.validation_message {
+				padding: 0.2em 1.5em;
+				margin-top: 0;
+			}
+		}
+
+		.gform_page_footer input+input {
+			margin-left: 0 !important; // Override theme button margin
+		}
+
+		.gform_page_footer {
+				display: flex;
+				/*justify-content: flex-end;*/
+
+				input[type=button],
+				input[type=submit] {
+					width: 100%;
+					border-radius: 30px;
+					font-size: 1.25em;
+					font-weight: 700;
+					line-height: 32px;
+					padding: 0.25em 0 1em;
+					flex-grow: 1;
+					text-decoration: none;
+
+					@include media(">=desktop") {
+						margin-top: 0em;
+					}
+				}
+
+				input[type=button],
+				input[type=submit] {
+					height: 3em;
+					padding: .75em 0.25em .5em;
+				}
+				.gform_next_button {
+					background-color: brand_color('red');
+					color: $white;
+
+					&:hover, &:focus {
+						background-color: brand_color('red', 'darken');
+					}
+				}
+
+				.gform_previous_button {
+
+					& + input {
+						margin-left: 0.25em !important;
+					}
+
+					&:hover, &:focus {
+						background-color: $grey_2;
+					}
+				}
+
+				input[type=submit] {
+					background-color: brand_color('red');
+					color: $white;
+				}
+			}
+	}
+}
+
+.gform_confirmation_wrapper.callback-form {
+
+	height: 100%;
+
+	.gform_confirmation_message {
+		border-top: 4px solid brand_color('red');
+		border-bottom: none;
+		border-left: none;
+		border-right: none;
+		padding: 2em;
+		margin: 0em auto;
+		max-width: none;
+		text-align: center;
+		position: relative;
+		height: 100%;
+		background-color: white;
+		color: black;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+		&:before {
+			content: none;
+		}
+	}
+}
+
+/*  BOGO Form
+--------------------------------------------*/
+.radio__boiler-furnace {
+	.gfield_radio {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.gchoice {
+		background-color: white;
+		border-radius: 10px;
+		padding: 1em .5em;
+		min-width: 125px;
+		margin: 0.5em;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		position: relative;
+		border: 2px solid #fff;
+		flex-grow: 1;
+		flex-direction: row;
+
+		@include media('<tablet'){
+			flex-direction: column;
+		}
+
+		label:before {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		&.selected {
+			border: 2px solid brand-color('red');
+		}
+	}
+}
+
+.gform_wrapper.bogo-form {
+
+	&_wrapper {
+		padding: 1.5em;
+		color: $black;
+		font-weight: 300;
+
+		.gfield-choice-input + label {
+			max-width: none !important;
+		}
+
+		h3 {
+			margin-bottom: 10px;
+			border-bottom: 1px solid gray;
+		}
+
+
+		.gfield {
+			input {
+				width: 0.75em;
+				margin: 0 0.25em;
+			}
+		}
+
+		.gform_page_footer {
+				display: flex;
+
+				input[type=button],
+				input[type=submit] {
+					border-radius: 30px;
+					font-size: 1.25em;
+					font-weight: 700;
+					line-height: 32px;
+					padding: 0.25em 0 1em;
+					flex-grow: 1;
+					text-decoration: none;
+
+					@include media(">=desktop") {
+						margin-top: 0em;
+					}
+				}
+
+				input[type=button],
+				input[type=submit] {
+					height: 3em;
+					padding: .65em 0.25em .5em;
+				}
+
+				.gform_next_button {
+					background-color: brand_color('red');
+					color: $white;
+
+					&:hover, &:focus {
+						background-color: brand_color('red', 'darken');
+					}
+				}
+
+				.gform_previous_button {
+
+					& + input {
+						margin-left: 0.25em !important;
+					}
+
+					&:hover, &:focus {
+						background-color: $grey_2;
+					}
+				}
+
+				input[type=submit] {
+					background-color: brand_color('red');
+					color: $white;
+				}
+		}
+
+		// Styles specific to page 1 of form
+		#gform_page_13_1 {
+			.ginput_container_checkbox .gchoice {
+				align-items: baseline;
+				margin: 0.75em 0;
+				line-height: 16px;
+			}
+
+			.gform_page_fields {
+				.gform_fields {
+					display: flex;
+					flex-direction: column;
+
+					@include media(">=tablet") {
+						flex-direction: row;
+						flex-wrap: wrap;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Targeting the BOGO confirmation page
+.gform_confirmation_wrapper.bogo-form {
+	.gform_confirmation_message {
+		&:before {
+			content: none;
+		}
+	}
+}
+
+/*  Form Static Image
+--------------------------------------------*/
+.gform_wrapper.gravity-theme {
+	.form-image-block {
+		display: flex;
+		flex-wrap: wrap;
+		grid-column-gap: 1.25em; 
+
+		&__image {
+			max-width: 350px;
+			max-height: 250px;
+		}
+
+		figure {
+			min-width: 125px;
+			max-width: 350px;
+    		display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+
+		    @include media(">=tablet") {
+		    	min-width: 125px;
+		    }	
+		}
+	}
+}
+
+
+
+/* Buttonize Radio & Checkbox Fields 
+--------------------------------------------*/
+
+.gform_wrapper.gravity-theme .gfield.gfield--width-full.buttonized {
+	grid-column: span 6;
+}
+
+ .gform_wrapper .gfield.buttonized .gfield_radio .gchoice,
+ .gform_wrapper .gfield.buttonized .gfield_checkbox .gchoice {
+    position: relative;
+    text-align: center;
+ }
+ .gform_wrapper .gfield.buttonized input[type="radio"],
+ .gform_wrapper .gfield.buttonized input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+ }
+ .gform_wrapper .gfield.buttonized .gfield_radio .gchoice > input[type="radio"]+label,
+ .gform_wrapper .gfield.buttonized .gfield_checkbox .gchoice > input[type="checkbox"]+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    font-size: 1.35em;
+    cursor: pointer;
+    padding: 2em 2em 2em 3em;
+    border-radius: $border-radius;
+    min-height: 200px;
+    border: 1px solid transparent;
+ }
+
+ .gform_wrapper .gfield.buttonized .gchoice > input[type="radio"]:hover+label,
+ .gform_wrapper .gfield.buttonized .gchoice > input[type="checkbox"]:hover+label,
+ .gform_wrapper .gfield.buttonized .gchoice > input[type="radio"]:focus+label,
+ .gform_wrapper .gfield.buttonized .gchoice > input[type="checkbox"]:focus+label,
+ .gform_wrapper .gfield.buttonized .gchoice > input[type="radio"]:checked+label,
+ .gform_wrapper .gfield.buttonized .gchoice > input[type="checkbox"]:checked+label {
+    outline: 3px solid $grey_3;
+    overflow: hidden;
+ }
+
+ .gform_wrapper .gfield.buttonized .gfield_radio label::before,
+ .gform_wrapper .gfield.buttonized .gfield_checkbox label::before {
+    display: none;
+ }
+
+ .gform_wrapper .gfield.buttonized .gchoice:nth-of-type(1) > input[type="radio"]+label {
+ 	background: url("https://www.enercare.ca/wp-content/uploads/2023/01/Fuse_panel_for_third_screen.png") left center / contain no-repeat;
+ 	background-size: 105px;
+ 	background-color: $grey_1;
+    background-position: calc(0% + 10px);
+ }
+
+ .gform_wrapper .gfield.buttonized .gchoice:nth-of-type(2) > input[type="radio"]+label {
+ 	background: url("https://www.enercare.ca/wp-content/uploads/2023/01/Breaker_panel_for_third_screen.png") left center / contain no-repeat;
+ 	background-size: 70px;
+ 	background-color: $grey_1;
+    background-position: calc(0% + 25px);
+
+    @include media("<=tablet") {
+    	background-position: calc(0% + 30px);
+    }
+ }
+
+.gform_wrapper .gfield.buttonized .gchoice:nth-of-type(1) > input[type="radio"]:hover+label,
+.gform_wrapper .gfield.buttonized .gchoice:nth-of-type(2) > input[type="radio"]:hover+label,
+.gform_wrapper .gfield.buttonized .gchoice:nth-of-type(1) > input[type="radio"]:focus+label,
+.gform_wrapper .gfield.buttonized .gchoice:nth-of-type(2) > input[type="radio"]:focus+label,
+.gform_wrapper .gfield.buttonized .gchoice:nth-of-type(1) > input[type="radio"]:checked+label,
+.gform_wrapper .gfield.buttonized .gchoice:nth-of-type(2) > input[type="radio"]:checked+label {
+	background-color: $white;
+	transition: background-color 0.3s ease;
+}
+
+
+
+ /* Layout Buttonized Inputs As Grid */
+ .gform_wrapper .gfield.buttonized .gfield_radio,
+ .gform_wrapper .gfield.buttonized .gfield_checkbox {
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr );
+    grid-gap: .5em 1em;
+
+    @include media("<=tablet") {
+    	grid-template-columns: repeat( 1, 1fr );
+    }
+
+    @include media (">tablet","<desktop") {
+    	grid-template-columns: repeat( 1, 1fr );
+    }
+ }

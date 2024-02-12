@@ -1,0 +1,288 @@
+{
+    "key": "group_5dd458c5a322b",
+    "title": "Site Options",
+    "fields": [
+        {
+            "key": "field_5dd458cd3c3fd",
+            "label": "Default Image",
+            "name": "enercare_default_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_613fa935315dc",
+            "label": "Default Phone Number",
+            "name": "default_phone_number",
+            "type": "text",
+            "instructions": "In places where a phone number CTA is displayed, if no override or specific number is present this number will be used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6182bba18747c",
+            "label": "Default Commercial Phone Number",
+            "name": "default_commercial_phone_number",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6140ff7bc0682",
+            "label": "Banner Toggle",
+            "name": "banner_toggle",
+            "type": "true_false",
+            "instructions": "This controls whether the banner (ie. covid) displays on the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6140ffb9c0683",
+            "label": "Default Banner Text",
+            "name": "banner_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6140ff7bc0682",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_611ad42cf41e1",
+            "label": "Footer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_611ad438f41e2",
+            "label": "Floating CTA Link",
+            "name": "floating_cta_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_6182bc1b953a2",
+            "label": "Floating CTA Link for Commercial",
+            "name": "floating_cta_link_commercial",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_611ad4ccf41e3",
+            "label": "Floating CTA Icon",
+            "name": "floating_cta_icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 30,
+            "min_height": 30,
+            "min_size": "",
+            "max_width": 30,
+            "max_height": 30,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_614b6b444f6e6",
+            "label": "Default Logo",
+            "name": "enercare_default_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_610846ae5d9ad",
+            "label": "Default Contact Form",
+            "name": "default_contact_form",
+            "type": "select",
+            "instructions": "In places where a contact form is needed if no override or specific form is present this form will be used. This field is populated by active gravity forms.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2": "Contact \/ Support Form",
+                "3": "Email Subscribe",
+                "4": "Buy\/Rent\/Rebates Lead Form",
+                "6": "Plans - Maintenance and Protection Form",
+                "7": "Smarter Home Form",
+                "8": "Property Managers Form",
+                "9": "Commercial Form",
+                "10": "Commercial Support Form"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_610847239c1eb",
+            "label": "Default Email Form",
+            "name": "default_email_form",
+            "type": "select",
+            "instructions": "In places where a newsletter signup form is needed if no override or specific form is present this form will be used. This field is populated by active gravity forms.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2": "Contact \/ Support Form",
+                "3": "Email Subscribe",
+                "4": "Buy\/Rent\/Rebates Lead Form",
+                "6": "Plans - Maintenance and Protection Form",
+                "7": "Smarter Home Form",
+                "8": "Property Managers Form",
+                "9": "Commercial Form",
+                "10": "Commercial Support Form"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1635957817
+}

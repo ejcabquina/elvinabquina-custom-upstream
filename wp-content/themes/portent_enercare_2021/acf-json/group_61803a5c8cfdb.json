@@ -1,0 +1,43 @@
+{
+    "key": "group_61803a5c8cfdb",
+    "title": "Block - Accordion Panel",
+    "fields": [
+        {
+            "key": "field_61803a6cc9198",
+            "label": "Is only accordion on mobile?",
+            "name": "mobile_only_accordion",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/enercare-accordion-panel"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1635793552
+}

@@ -1,0 +1,275 @@
+{
+  "key": "group_615363590b0d1",
+  "title": "Block - Comparison Card",
+  "fields": [
+	{
+	  "key": "field_6154963c432b9",
+	  "label": "Comparison Cards",
+	  "name": "comparison_cards",
+	  "type": "repeater",
+	  "instructions": "",
+	  "required": 0,
+	  "conditional_logic": 0,
+	  "wrapper": {
+		"width": "",
+		"class": "",
+		"id": ""
+	  },
+	  "collapsed": "",
+	  "min": 0,
+	  "max": 0,
+	  "layout": "block",
+	  "button_label": "Add Card",
+	  "sub_fields": [
+		{
+		  "key": "field_615363f1858dd",
+		  "label": "Title",
+		  "name": "title",
+		  "type": "text",
+		  "instructions": "",
+		  "required": 0,
+		  "conditional_logic": 0,
+		  "wrapper": {
+			"width": "",
+			"class": "",
+			"id": ""
+		  },
+		  "default_value": "",
+		  "placeholder": "",
+		  "prepend": "",
+		  "append": "",
+		  "maxlength": ""
+		},
+		{
+		  "key": "field_615363a1858db",
+		  "label": "Heading",
+		  "name": "heading",
+		  "type": "text",
+		  "instructions": "",
+		  "required": 0,
+		  "conditional_logic": 0,
+		  "wrapper": {
+			"width": "",
+			"class": "",
+			"id": ""
+		  },
+		  "default_value": "",
+		  "placeholder": "",
+		  "prepend": "",
+		  "append": "",
+		  "maxlength": ""
+		},
+		{
+		  "key": "field_615363df858dc",
+		  "label": "Sub-heading",
+		  "name": "subheading",
+		  "type": "text",
+		  "instructions": "",
+		  "required": 0,
+		  "conditional_logic": 0,
+		  "wrapper": {
+			"width": "",
+			"class": "",
+			"id": ""
+		  },
+		  "default_value": "",
+		  "placeholder": "",
+		  "prepend": "",
+		  "append": "",
+		  "maxlength": ""
+		},
+		{
+		  "key": "field_615363ff858de",
+		  "label": "Description",
+		  "name": "description",
+		  "type": "textarea",
+		  "instructions": "100-120 character body copy.",
+		  "required": 0,
+		  "conditional_logic": 0,
+		  "wrapper": {
+			"width": "",
+			"class": "",
+			"id": ""
+		  },
+		  "default_value": "",
+		  "placeholder": "",
+		  "maxlength": 120,
+		  "rows": 3,
+		  "new_lines": ""
+		},
+		{
+		  "key": "field_61536450858df",
+		  "label": "Toggle Open Text",
+		  "name": "toggle_open_text",
+		  "type": "text",
+		  "instructions": "",
+		  "required": 0,
+		  "conditional_logic": 0,
+		  "wrapper": {
+			"width": "",
+			"class": "",
+			"id": ""
+		  },
+		  "default_value": "",
+		  "placeholder": "",
+		  "prepend": "",
+		  "append": "",
+		  "maxlength": ""
+		},
+		{
+		  "key": "field_61536458858e0",
+		  "label": "Toggle Close Text",
+		  "name": "toggle_close_text",
+		  "type": "text",
+		  "instructions": "",
+		  "required": 0,
+		  "conditional_logic": 0,
+		  "wrapper": {
+			"width": "",
+			"class": "",
+			"id": ""
+		  },
+		  "default_value": "",
+		  "placeholder": "",
+		  "prepend": "",
+		  "append": "",
+		  "maxlength": ""
+		},
+		{
+		  "key": "field_615364a0858e1",
+		  "label": "Comparison Table",
+		  "name": "comparison_table",
+		  "type": "repeater",
+		  "instructions": "",
+		  "required": 0,
+		  "conditional_logic": 0,
+		  "wrapper": {
+			"width": "",
+			"class": "",
+			"id": ""
+		  },
+		  "collapsed": "",
+		  "min": 0,
+		  "max": 0,
+		  "layout": "block",
+		  "button_label": "",
+		  "sub_fields": [
+			{
+			  "key": "field_615364ce858e2",
+			  "label": "Comparison Name",
+			  "name": "comparison_name",
+			  "type": "text",
+			  "instructions": "",
+			  "required": 0,
+			  "conditional_logic": 0,
+			  "wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			  },
+			  "default_value": "",
+			  "placeholder": "",
+			  "prepend": "",
+			  "append": "",
+			  "maxlength": ""
+			},
+			{
+			  "key": "field_615364ef858e3",
+			  "label": "Comparison Subtext",
+			  "name": "comparison_subtext",
+			  "type": "text",
+			  "instructions": "",
+			  "required": 0,
+			  "conditional_logic": 0,
+			  "wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			  },
+			  "default_value": "",
+			  "placeholder": "",
+			  "prepend": "",
+			  "append": "",
+			  "maxlength": ""
+			},
+			{
+			  "key": "field_615364fd858e4",
+			  "label": "Comparison Value",
+			  "name": "comparison_value",
+			  "type": "radio",
+			  "instructions": "Selecting \"Checkmark\" will display the red checkmark.\r\nSelecting \"Other\" and defining a value will display that value\/text.",
+			  "required": 0,
+			  "conditional_logic": 0,
+			  "wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			  },
+			  "choices": {
+				"Checkmark": "Checkmark"
+			  },
+			  "allow_null": 0,
+			  "other_choice": 1,
+			  "save_other_choice": 0,
+			  "default_value": "",
+			  "layout": "vertical",
+			  "return_format": "value"
+			}
+		  ]
+		},
+		{
+		  "key": "field_61536669858e5",
+		  "label": "CTA Text",
+		  "name": "cta_text",
+		  "type": "textarea",
+		  "instructions": "",
+		  "required": 0,
+		  "conditional_logic": 0,
+		  "wrapper": {
+			"width": "",
+			"class": "",
+			"id": ""
+		  },
+		  "default_value": "",
+		  "placeholder": "Want to sign up call 1-888-888-8888",
+		  "maxlength": "",
+		  "rows": 2,
+		  "new_lines": "br"
+		},
+		{
+		  "key": "field_61536746858e6",
+		  "label": "CTA Button",
+		  "name": "cta_button",
+		  "type": "link",
+		  "instructions": "Enter text and link to display CTA button. Leave blank to show nothing.",
+		  "required": 0,
+		  "conditional_logic": 0,
+		  "wrapper": {
+			"width": "",
+			"class": "",
+			"id": ""
+		  },
+		  "return_format": "array"
+		}
+	  ]
+	}
+  ],
+  "location": [
+	[
+	  {
+		"param": "block",
+		"operator": "==",
+		"value": "acf\/comparison-card"
+	  }
+	]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "modified": 1634606481
+}

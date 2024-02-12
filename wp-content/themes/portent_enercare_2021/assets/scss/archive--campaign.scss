@@ -1,0 +1,47 @@
+@import "partials/base";
+@import "blocks/offer-card";
+
+.post-type-archive-campaign {
+
+	.site-inner {
+		padding-top: 0;
+	}
+	background-color: $grey_1;
+
+	.archive-title {
+		display: none;
+	}
+
+	.archive-description {
+		max-width: $grid-width;
+	}
+
+	.breadcrumb {
+		display: none;
+	}
+
+	.archive-description .archive-widget-area {
+		@include alignfull;
+		margin-top: 0;
+	}
+
+	.site-main .archive-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.wp-block-cover__inner-container {
+		max-width: $grid-width;
+	}
+
+	.block-offer-card__wrapper,
+	.block-offer-card__container {
+		height: 100%;
+	}
+
+	.location-archive-filters {
+		max-width:$content-width;
+		margin: 0 auto;
+	}
+
+	@import "pieces/location-filter-area";
+}

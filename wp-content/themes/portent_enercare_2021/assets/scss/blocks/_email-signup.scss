@@ -1,0 +1,155 @@
+.block-newsletter-form {
+
+	&__container {
+		display: block;
+		flex-direction: column;
+		padding: 32px 24px;
+
+		@include media(">=desktop") {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			padding: 64px 0;
+			width: 70vw;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	}
+
+	&__content-container {
+
+		border-bottom: 2px solid $grey_3;
+		margin-bottom: 1.25rem;
+
+		@include media(">=desktop") {
+			display: flex;
+			border-right: 1px solid $grey_3;
+			padding-right: 10%;
+  			grid-template-columns: .25fr 1fr 1fr; 
+  			grid-template-rows: .2fr 1fr; 
+  			gap: 0px 24px; 
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+
+	}
+
+	&__image {
+		display: block;
+    	object-fit: contain;
+    	width: 80px;
+    	margin-left: auto;
+    	margin-right: auto;
+    	margin-bottom: 1rem;
+    	height: auto;
+
+		@include media(">=desktop") {
+			grid-area: image;
+			background: no-repeat center;
+			background-size: contain;
+			height: 80px;
+			width: 80px;
+			max-width: 100px;
+			// content: url("../icons/utility/email-signup--black.svg");
+			display: block;
+		}
+	}
+
+	&__heading {
+		font-size: 18px;
+		text-align: center;
+		font-weight: 700;
+		align-self: baseline;
+
+		@include media(">=desktop") {
+			grid-area: heading;
+			text-align: left;
+			margin-bottom: 0;
+		}
+
+	}
+
+	&__content {
+		font-size: 1rem;
+		line-height: 1.25;
+		font-weight: 400;
+		margin-bottom: 1.5rem;
+
+		h2 {
+			font-size: 1.5rem;
+			line-height: 110%;
+		}
+
+		@include media(">=desktop") {
+			grid-area: content;
+			text-align: left;
+			font-size: 1rem;
+			line-height: 1.2;
+			margin-left: 0;
+			margin-bottom: 0;
+			margin-top: 16px;
+		}
+
+		
+	}
+
+	&__form-container {
+		margin: 0 auto;
+
+		@include media(">=desktop") {
+			margin: 0 0 0 24px;
+			align-self: center;
+			flex-basis: 40%;
+		}
+
+		.gform_wrapper {
+			@include media(">=desktop") {
+				width: 100%;
+			}
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+
+			.gform_body {
+				label.gfield_label {
+					font-size: 14px;
+					font-weight: 300;
+					margin-bottom: 2px;
+				}
+
+				input[type=text] {
+					border-radius: 5px 0 0 5px;
+					padding: 8px 12px;
+					max-height: 40px;
+					line-height: 24px;
+				}
+			}
+
+			.gform_footer {
+
+				input[type=submit] {
+					width: auto;
+					border-radius: 0 5px 5px 0;
+					font-size: 1.125rem;
+					font-weight: 700;
+					line-height: 24px;
+					padding: 2px 16px;
+					text-decoration: none;
+					background-color: brand-color('red');
+					color: $white;
+					margin-bottom: 0;
+					margin-top: 3px;
+					max-height: 40px;
+
+					@include media(">=tablet") {
+						padding: 8px 16px;
+					}
+				}
+			}
+		}
+	}
+
+}

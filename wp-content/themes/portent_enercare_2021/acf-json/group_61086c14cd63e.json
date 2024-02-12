@@ -1,0 +1,78 @@
+{
+    "key": "group_61086c14cd63e",
+    "title": "Block - Card",
+    "fields": [
+        {
+            "key": "field_617ae9e2fd026",
+            "label": "Justification",
+            "name": "justification",
+            "type": "select",
+            "instructions": "Use this option to smooth adjustment for card content. Everything can track evenly from top to bottom or it can fill the full vertical area of the card.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "normal": "None",
+                "flex-start": "Top",
+                "flex-end": "Bottom",
+                "center": "Center",
+                "space-between": "Fill"
+            },
+            "default_value": "space-between",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_617aea6ffd027",
+            "label": "Alignment",
+            "name": "alignment",
+            "type": "select",
+            "instructions": "Use this option to align all items within the card",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Left",
+                "center": "Center",
+                "flex-end": "Right"
+            },
+            "default_value": "center",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/card"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1635447325
+}

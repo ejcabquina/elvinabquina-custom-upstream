@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "enercare",
+  "private_key_id": "19ffdfc490044a714543b99fb995cac0bf5b07b6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDMvILVD3/rS/Ix\nMO33hneol17s1fsc1ihw2fIsm2hrxQDkcm1kW8hg+zkn7TR405P7QxB8EPzFsufF\njTAQlxrB8cvJbpoJaKRTrgbIjPg4Fj7etuFxntWpyy6hVksUyGVjYg5a2Q4b3Nj0\nXPRaFDRLs/i931K7vsAxFVClH3W56zzaN8dOTHo6XedM2qpfHYb0vEJonJ2gIOMC\n7E0boGdk7EsFC67zTUtsVSwEUB23Bzjsjc5OOQebByuyjiyJXCJ+GD9fGNC/XCGw\nURkVW5HmaHf8pOjSqKYS89dL/VFCX4sfixTWE0aQGRMheavN1utn/6Ao3gDTIp7B\nnbWDVHxHAgMBAAECggEAKfAZeqxMnzW03DeyHyh3vVyYcLoaUJtbuFYkodeJqb22\ng5Ue7FZSsu7zE8cmnvN0Fh10NH3EUXjmuhREOrnBHOY7QL07p168fnmg4RbjR5Xi\n9fsPLheDm97HY/wJsC2mexecaiaZGcMA2/logkUuOy2X78jdqSCXPNapaNGLa3Qy\n/VongkBKBBidOCcTDqDthy5miAwBfryKrY/HS0ky0F+h1HrazZlkFELTss85LTCs\ntO48zyK7u6G8yRXvdPTdt+gzCMuPZyHXkBj9xIh+0QMjb1vPtoGb5kWwr8Eha5Rx\n08ClC/+/D/zd1rUx8sp2w8/OBxS6N1CsqVsgP6kVOQKBgQDmBzrtAr9sNsHKjAlf\nXTwEuw266MLcTcxL2AO/g3ZsMrmorCvzZ/ZcEMsFDcz5J3DB+uVCYr+sKCaVgsN8\nV2Ot0tT2auRcNaNII4XgvY8UtlBNW5tP8y4FsoWzhnmiHnZBlheuqH4p2ddFSqir\nDs5BMm68MHX6qJSouTDgEvXMzwKBgQDj2j2uuQ10ct51gfLv9KMoWSEAB6d1UKbP\njfKAKww9gmCDA37rmcCk2/c7LJN8WXiVom9Lhi9cL3xgn58L8O/e/vX/OKwrpAYg\nLOkpdWsc577CeIxKFK/GeHJa2uxrr+KCgO1c1zrMHBmDZkRVPAIalzrLVabhozg3\nCmcjtGdnCQKBgHQslKMdLyZtJUSxow4p3WUaP531bmyrUhHAAGyZ7ZZJrCC3C997\n0x2+UXq09J+lPrqJh34Wt20wPgRmrWpADJS+lVX6uGiloliNsFDIC9pPFZFsQa2I\nSOcRuZrowMeTEPCg6EcKy+VBIwrY4QS7jom4+dpLs1osCCCKn1eb285bAoGBAMJG\nR8edQyqh8qnQlhogxajWbfu/ivnNPZ3E0xqTGcmsS6wJpAMwQoCOiPtsY4hoJRe4\nuxpzHBiG6I7eKtccpPnG/GqToMFJBmwSvu85jY3EzvKzpDJZ9xHLiv2KooCjJAfP\n9BLv9NMptltCLEtcchLIFTpgGn1TFNBhT1WzMWM5AoGAZ+0JKI/IBUhB21oGjGHs\n+jaMoQ6vgAvE6G/KDzvKzexa+4f2eBGETpJk3UpBksn2JM3q0ucGhKeuym5q2xnn\nTPbfnpYbm1awYTsab6BN55vW65O5g45h6Lg/fq5RXEVdcui/r1hcN6BD22yMaqOj\nmQTpJIbUVqMt1pD/W3KwUwo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "reviews@enercare.iam.gserviceaccount.com",
+  "client_id": "116680427685262583404",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/reviews%40enercare.iam.gserviceaccount.com"
+}

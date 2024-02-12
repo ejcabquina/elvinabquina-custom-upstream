@@ -1,0 +1,69 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-cgb-block-portent-responsive-cover {
+  background: orangered;
+  border: 0.2rem solid #292929;
+  color: #292929;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem; }
+
+:root {
+  --block-responsive-cover-min-height: 600px;
+  --block-responsive-cover-padding:1.5em;
+  --block-responsive-cover-inner-block-max-width: 85%;
+  --block-responsive-cover-inner-block-margin: calc(2 * 20px) auto; }
+
+.wp-block-portent-block-portent-responsive-cover {
+  padding: var(--block-responsive-cover-padding);
+  min-height: var(--block-responsive-cover-min-height);
+  max-width: 100vw;
+  position: relative;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+  @media screen and (max-width: 46em) {
+    .wp-block-portent-block-portent-responsive-cover {
+      min-height: unset; } }
+  .wp-block-portent-block-portent-responsive-cover__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.2); }
+  .wp-block-portent-block-portent-responsive-cover__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 1; }
+    .wp-block-portent-block-portent-responsive-cover__picture img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      height: 100%;
+      width: 100%;
+      -o-object-position: center;
+         object-position: center; }
+  .wp-block-portent-block-portent-responsive-cover__inner-blocks {
+    position: relative;
+    z-index: 3;
+    margin: var(--block-responsive-cover-inner-block-margin);
+    max-width: var(--block-responsive-cover-inner-block-max-width); }

@@ -1,0 +1,58 @@
+{
+    "key": "group_613fac05e3399",
+    "title": "Phone Number",
+    "fields": [
+        {
+            "key": "field_613fac33b1404",
+            "label": "Phone Number",
+            "name": "phone_number",
+            "type": "text",
+            "instructions": "In places where a phone number CTA is displayed, this number will be used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "location"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "landing-page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1631641114,
+    "local_file": "\/var\/www\/html\/wp-content\/themes\/portent_enercare_2021\/acf-json\/group_613fac05e3399.json"
+}

@@ -1,0 +1,45 @@
+{
+    "key": "group_6137c4a8b7946",
+    "title": "Taxonomy - Services",
+    "fields": [
+        {
+            "key": "field_6137c4cf82888",
+            "label": "Service Link",
+            "name": "service_link",
+            "type": "page_link",
+            "instructions": "Select the default associated service page\/link for this service taxonomy term.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 0,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "services"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1631044947
+}

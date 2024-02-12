@@ -1,0 +1,26 @@
+.breadcrumbs {
+	background-color: $grey_1;
+	max-width: 100vw;
+}
+
+.breadcrumbs__navigation {
+	max-width: $grid_width;
+	margin: 0 auto;
+}
+.breadcrumb {
+
+	& > span {
+		display: block;
+		padding: 0.3em 0;
+		margin: 0 auto;
+		max-width: $grid-width;
+	}
+
+	@include media("<desktop") {
+
+		& > span {
+			display: inline;
+			padding: 0.25em 1em;
+		}
+	}
+}

@@ -1,0 +1,256 @@
+/**
+Menu Customization Variables
+ */
+:root {
+	--status-area-background-color: #eee;
+	--status-area-bottom-border-color: #9F1C20;
+
+	--menu-item-bottom-border-color: #ccc;
+
+	--menu-sub-header-background-color: #eee;
+
+	--button-color: #000;
+	--button-active-background-color: #f5f2f2;
+	--button-active-color: #da1b27;
+	--button-font-family: "Post Grotesk";
+}
+
+/**
+Hiding for non nav elements when menu is open
+This little cascade is bananas, I know, however the structure of the page and where the menu sits dictates that we
+carefully mute around the navigation when it is open to keep page elements from being read by the screen reader.
+ */
+body[data-menu="open"] .site-container > *:not(.site-header),
+body[data-menu="open"] .site-container .site-header > *:not(.wrap),
+body[data-menu="open"] .site-container .site-header .wrap > *:not(.portent-toggle-nav),
+body[data-menu="open"] .site-container .site-header .portent-toggle-nav[data-menu="open"] button[data-interface="menu-toggle"],
+body[data-menu="open"] .site-container .site-header .portent-toggle-nav[data-menu="open"] .mobile-nav-item{
+	visibility: hidden !important;
+}
+
+/**
+Hiding elements really forces them out of the screen reader's vision
+ */
+body[data-menu="open"] .site-container .site-main,
+body[data-menu="open"] .site-container .legal__terms,
+body[data-menu="open"] .site-container .footer-widgets,
+body[data-menu="open"] .site-container .site-footer,
+body[data-menu="open"] .floating-cta
+{
+	display: none;
+}
+
+/**
+This is a little addition for mobile safari, which gets a little precious about the height of the page container
+when everything is hidden.
+ */
+body[data-menu="open"] .site-container .site-inner {
+	height:100vh;
+}
+
+[data-interface=statusArea] {
+	display:none;
+}
+
+.portent-toggle-nav .mobile-search-field__wrapper {
+	display: none;
+}
+
+.portent-toggle-nav .brand-area {
+	display: none;
+
+	button {
+		color: var(--button-color);
+		font-family: var(--button-font-family);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.portent-toggle-nav[data-interface="menu-toggle"][aria-expanded="true"]{
+		color: var(--button-active-color);
+		background-color: var(--button-active-background-color);
+	}
+}
+/**
+Mobile Menu Styles
+ */
+@include media('<=mobile_menu') {
+
+	.portent-toggle-nav {
+		display: none;
+
+		.menu-item {
+			border-bottom: 1px solid var(--menu-item-bottom-border-color);
+		}
+
+		.menu-item-has-children button {
+			width: 100%;
+			background-color: transparent;
+			border: none;
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+			padding: 1.5em 0.75em;
+		}
+
+		.menu {
+			overflow-y: scroll;
+		}
+
+		.menu-item a {
+			width: 100%;
+			background-color: transparent;
+			border: none;
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+			padding: 1em 0.75em;
+		}
+
+		ul {
+			position: relative;
+		}
+
+		.mobile-close-button {
+			flex-grow: 1;
+			text-align: right;
+			border: none;
+			background-color: transparent;
+			color: var(--button-color);
+		}
+
+		.brand-area {
+			display: flex;
+			padding: 0.5em;
+		}
+
+		.brand-area__logo {
+			flex-basis: auto;
+			max-height: 40px;
+			object-position: center left;
+		}
+
+		.menu-item button {
+			color: var(--button-color);
+		}
+	}
+
+	.portent-toggle-nav[data-mobile="open"] {
+		display: block;
+		position: fixed;
+		overflow-y:scroll;
+		left: 0;
+		top: 0;
+		background-color: white;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	/**
+	Specific to Enercare
+	 */
+	.portent-toggle-nav[data-mobile="open"] .sub-menu .sub-menu {
+		display: block;
+		position: relative;
+	}
+
+	button[data-interface="menu-toggle"][aria-expanded="true"] + .sub-menu {
+		display: block;
+	}
+
+	.portent-toggle-nav .sub-menu .menu-item-object-custom span {
+		background-color: var(--menu-sub-header-background-color);
+		display: block;
+		padding: 0.5em;
+		font-weight: 700;
+	}
+
+	.portent-toggle-nav .addsearch-searchfield {
+		width: 100%;
+
+		input {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	.portent-toggle-nav .mobile-search-field__wrapper {
+		display: block;
+		padding: 0.5em;
+	}
+	/**
+	End Specifics
+	 */
+
+	.portent-toggle-nav .sub-menu:first-of-type {
+		display: none;
+	}
+
+	.menu-item[data-open=true] {
+		position:static;
+
+		.sub-menu {
+			position: absolute;
+			z-index: 9999;
+			top: 0 !important;
+			left: 0;
+			background-color: white;
+			height: 100%;
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	[data-interface="menu-toggle"]{
+		align-items: center;
+		color: var(--button-color);
+		font-family: var(--button-font-family);
+		&:after {
+			content: '';
+			vertical-align: middle;
+			display: inline-block;
+			border-style: solid;
+			height: 0;
+			width: 0;
+			border-color: #000 transparent transparent;
+			border-width: 10px 5px 0;
+			margin-right: 0.25em;
+			transform: rotate(270deg);
+		}
+	}
+
+	/**
+	Status Area Base Style
+	 */
+	[data-interface=statusArea] {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		padding: 0.5em;
+		margin: 0 0 0.5em;
+		background-color: var(--status-area-background-color);
+		border-bottom: 1px solid var(--status-area-bottom-border-color);
+	}
+
+	/**
+	Mobile Menu Back Button Base Style
+	 */
+	.mobile-back-btn {
+		display: none;
+	}
+
+	/**
+	Menu open state
+	 */
+	.portent-toggle-nav[data-menu=open] {
+		.mobile-back-btn {
+			display: block;
+			color: var(--button-color);
+		}
+	}
+
+	/**
+	Body State
+	 */
+
+}

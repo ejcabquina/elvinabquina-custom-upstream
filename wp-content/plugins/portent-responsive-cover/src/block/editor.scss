@@ -1,0 +1,25 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-cgb-block-portent-responsive-cover  {
+  background: $green;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+}
+
+.wp-block-portent-block-portent-responsive-cover {
+
+	.block-editor-inner-blocks {
+		position: relative;
+		z-index: 3;
+		margin: var(--block-responsive-cover-inner-block-margin);
+		max-width: var(--block-responsive-cover-inner-block-max-width);
+	}
+}

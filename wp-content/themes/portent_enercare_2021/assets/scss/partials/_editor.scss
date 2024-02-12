@@ -1,0 +1,110 @@
+/**
+Styles just for the editor
+ */
+
+[data-empty="true"].block-editor-block-list__block {
+	border: dashed 2px rgba(0,0,0,0.3);
+	padding: 0.5em 0;
+}
+
+/**
+Carousel
+ */
+.wp-block-acf-glider-carousel {
+	.block-editor-block-list__layout {
+		display: flex;
+
+		& > .wp-block {
+			order: 1;
+		}
+
+		.block-list-appender {
+			order: 0;
+		}
+	}
+}
+
+/**
+Offer Card
+*/
+.modal__overlay {
+	display: none;
+}
+
+/**
+Tabbed Content
+ */
+.wp-block-portent-block-tabbed-content .block-tabbed-content__tab-panels .block-editor-inner-blocks .block-editor-block-list__layout > .block-list-appender .block-editor-button-block-appender {
+
+	&:after {
+		content: 'Add Tab';
+		display: inline-block;
+		color: $white;
+	}
+
+}
+
+.block-location-finder__content {
+	padding: 14% 0 13% 3% !important;
+}
+
+.block-location-finder__form {
+	padding: 0 10px !important;
+}
+
+.block-location-finder__form-container {
+	padding: 10px !important;
+}
+
+[data-type="portent/block-tabbed-content"] {
+
+	border: dashed 1.25px transparent;
+	padding: 0.25em 0.5em 0 0;
+
+	&.is-selected,
+	&.has-child-selected {
+		border: dashed 1.25px lightblue;
+	}
+}
+
+.block-tabbed-content__panel {
+	border: dashed 1.25px rgba(0, 0, 0, 0.45);
+	margin: 0.25em;
+	padding: 0.25em;
+}
+
+.block-tabbed-content__tab__title {
+	border: 1px dashed $white;
+	display: block;
+	font-size: 14px;
+	background: black;
+	color: white;
+	padding: 0.55em 0.25em 0.25em 0.25em;
+	border-radius: 10px;
+	transform: translateY(-50%);
+	position: relative;
+	margin: 0;
+
+	&:before {
+		content: 'TAB: ';
+		display: inline;
+	}
+}
+
+.only-mobile {
+	&:before {
+		content: 'Mobile Only';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(-5%, -5%);
+		z-index: 10;
+		background-color: black;
+		color: white;
+		font-size: 0.75rem;
+		padding: 0.25rem;
+		border-radius: 0.25rem;
+		line-height: 1;	
+	}
+}

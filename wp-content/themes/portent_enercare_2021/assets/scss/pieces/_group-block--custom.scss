@@ -1,0 +1,18 @@
+.group-block--border {
+	border: 3px solid $grey_5;
+	border-radius: 30px;
+	padding: 2em !important; // !important used to override theme settings
+	margin: calc( 2 * 20px) auto !important; // !important used to override theme settings
+
+	@include media("<tablet") {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	img {
+		@include media("<desktop") {
+			max-width: 75px;
+			margin: auto;
+		}
+	}
+}

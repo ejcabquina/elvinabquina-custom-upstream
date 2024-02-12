@@ -1,0 +1,255 @@
+{
+    "key": "group_612f9dfcd979c",
+    "title": "Block - Offer Card",
+    "fields": [
+        {
+            "key": "field_612f9eba9a6d5",
+            "label": "Variation",
+            "name": "variation",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Selects the proper visual treatment for rendering campaign data.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Default \/ Offer Card": "Default \/ Offer Card",
+                "Masthead Offer Card": "Masthead Offer Card",
+                "Full Width with Image": "Full Width with Image",
+                "Classic": "Classic",
+                "Blue Highlight": "Blue Highlight"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_612f9f4a9a6d6",
+            "label": "Block Style",
+            "name": "block_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Default": "Default",
+                "Bordered": "Bordered",
+                "Shadowed": "Shadowed"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_612f9f65f6029",
+            "label": "Campaign Categories",
+            "name": "campaign_categories",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Select campaign categories that will be queried.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "campaign-category",
+            "field_type": "checkbox",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
+            "key": "field_612f9f91f602a",
+            "label": "AND\/OR",
+            "name": "and_or",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "TRUE\/FALSE condition that will set the relationship between selected categories.\r\n\r\n    AND - Default, all queried campaigns must have ALL categories selected\r\n    OR - Queried campaigns can include any number or mixture of selected categories",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "True",
+            "ui_off_text": "False"
+        },
+        {
+            "key": "field_612f9fc7f602b",
+            "label": "Unique",
+            "name": "unique",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "TRUE\/FALSE condition that will allow a campaign spot to be a duplicate of another campaign currently on the page.\r\n\r\n    TRUE - Default, campaign spot must be unique and will honor offsets\/exclusions\r\n    FALSE - Campaign spot can be a duplicate of a campaign already rendered to the page and will not honor current offsets\/exclusions",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "True",
+            "ui_off_text": "False"
+        },
+        {
+            "key": "field_612f9ff2f4195",
+            "label": "Override?",
+            "name": "override",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Toggle this to override the settings above and select a specific campaign to display in this block.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_612fa098f4196",
+            "label": "Campaign",
+            "name": "campaign",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Select the campaign you want to override the above settings with and display in this block.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "campaign"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 1,
+            "return_format": "object"
+        },
+        {
+            "key": "field_612fbefb94fa6",
+            "label": "CTA Icon",
+            "name": "cta_icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Select an icon to be displayed in the CTA button.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "1-1-small",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_612fbd0194fa5",
+            "label": "CTA Text",
+            "name": "cta_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Shop Plans",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6172fe2774507",
+            "label": "CTA URL Override",
+            "name": "cta_url_override",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Only fill this out if you want to override the URL an offer\/campaign should link to. The best example of using this field is when an offer card is being used on the page where the lead form exists and you want a jump link to the form. i.e. #form",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/offer-card"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1693455745,
+    "local_file": "\/Users\/jeremiah\/Local Sites\/enercare-2021\/app\/public\/wp-content\/themes\/portent_enercare_2021\/acf-json\/group_612f9dfcd979c.json"
+}

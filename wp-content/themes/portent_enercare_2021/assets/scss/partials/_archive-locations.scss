@@ -1,0 +1,60 @@
+.post-type-archive-location {
+
+	.site-inner {
+		background-color: $grey_1;
+		padding-top: 0;
+	}
+
+	.site-main {
+
+		.block-area,
+		.no-results {
+			grid-column: 1 / -1;
+			margin-bottom: 48px;
+		}
+
+
+		.archive-wrapper {
+			@include columns(1);
+			grid-row-gap: 1.5em;
+
+			@include media(">=tablet") {
+				@include columns(2);
+				grid-column-gap: 1.5em;
+
+			}
+		}
+	}
+
+	.archive-filters {
+
+	}
+
+	.archive-title,
+	.archive-description-content {
+		margin: 0 auto;
+		max-width: $content-width;
+	}
+
+	.archive-header__after {
+		margin: 2em auto 1.5em;
+		max-width: $content-width;
+	}
+
+	.archive-description {
+		max-width: $grid-width;
+	}
+
+	.breadcrumb {
+		padding: 0.5em 0 2em;
+
+		@include media('>=tablet') {
+			padding: 0.5em 0 2em;
+		}
+	}
+
+	@import "../pieces/location-filter-area";
+
+	@import "../pieces/postal-code-filter";
+}
+

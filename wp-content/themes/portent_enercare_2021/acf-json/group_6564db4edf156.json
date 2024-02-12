@@ -1,0 +1,109 @@
+{
+    "key": "group_6564db4edf156",
+    "title": "Global Reviews Banner Options",
+    "fields": [
+        {
+            "key": "field_6564db4f34493",
+            "label": "Display?",
+            "name": "reviews_banner_toggle",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6564dd893a8e2",
+            "label": "Reviews Count",
+            "name": "reviews_banner_count",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "The number of reviews displayed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "50,000",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6564dcf43a8e1",
+            "label": "Rating",
+            "name": "reviews_banner_rating",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "max": 5,
+            "step": ".1",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6564db4f2939f",
+            "label": "Accompanying Text",
+            "name": "reviews_banner_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Text that accompanies the number of reviews. i.e. \"Online Reviews\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 64,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1701131212,
+    "local_file": "\/Users\/jeremiahbratton\/Local Sites\/enercare\/app\/public\/wp-content\/themes\/portent_enercare_2021\/acf-json\/group_6564db4edf156.json"
+}

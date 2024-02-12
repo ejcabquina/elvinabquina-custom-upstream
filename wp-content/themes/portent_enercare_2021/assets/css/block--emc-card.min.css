@@ -1,0 +1,23 @@
+.has-focus-style--black{outline-color:#000 !important}
+.has-focus-style--white{outline-color:#fff !important}
+.has-focus-style--red{outline-color:#da1b27 !important}
+.has-focus-style *:focus{outline:2px dotted;outline-color:inherit}
+.block-emc-card{background-color:#fff;border:0;-webkit-box-shadow:0 4px 8px 0 rgba(56,61,67,.3);box-shadow:0 4px 8px 0 rgba(56,61,67,.3);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:8%;height:100%}
+.block-emc-card__image{border-radius:100%;margin:0 2.75em 1.5em;width:90%}
+.block-emc-card h3{font-size:20px;margin-bottom:0}
+.block-emc-card__text{font-weight:300}
+.block-emc-card__content{background-color:#fff;height:100%;left:0;padding:1em;position:absolute;top:0;width:100%;overflow-x:hidden;overflow-y:scroll;-webkit-transition:top .35s ease-out,visibility .35s ease,opacity .2s ease;transition:top .35s ease-out,visibility .35s ease,opacity .2s ease;visibility:visible;opacity:1}
+.block-emc-card__content[aria-hidden=true]{visibility:hidden;top:100%;-webkit-transition:top .4s ease-in,visibility .4s ease,opacity .15s ease;transition:top .4s ease-in,visibility .4s ease,opacity .15s ease;opacity:0}
+.block-emc-card__link{padding-bottom:.25em}
+.block-emc-card__wrapper{position:relative}
+.block-emc-card__bio-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 24px 0 0;margin-bottom:1em}
+.block-emc-card__bio-header__image{border-radius:100%;height:50px;width:50px;margin:0 .5em 0 .25em}
+.block-emc-card__close-button{border:0;background-color:rgba(0,0,0,0);border-radius:100%;position:absolute;padding:.5em;right:.5em;top:.5em}
+.block-emc-card__close-button:hover,.block-emc-card__close-button:focus{background-color:#e6e4e4}
+.block-emc-card__close-button:focus{border:1px dotted #3d3d43}
+.block-emc-card__close-button img{height:15px;width:15px}
+.block-emc-card .wp-block-button__link{margin-top:1.5em}
+.block-emc-card button{border:0}
+.block-carousel__wrapper .block-emc-card__wrapper{margin:0 .75em}
+@media(min-width:768px){.block-emc-card__image{margin:0 3.125em 1.5em;width:75%;max-width:172px !important;height:auto}
+}

@@ -1,0 +1,203 @@
+.block-comparison-card {
+	text-align: center;
+
+	&__wrapper {
+		display: none;
+		visibility: hidden;
+
+		@include media(">=tablet") {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			grid-column-gap: 28px;
+			visibility: visible;
+		}
+	}
+
+	&__title {
+		font-size: 1.5em;
+		font-weight: 700;
+		line-height: 32px;
+		text-align: center;
+		background-color: $grey_1;
+		padding-top: 20px;
+		padding-bottom: 1em;
+		border-top: 4px solid brand-color('red');
+
+		@include media("<=tablet") {
+			border-top: none;
+			border-bottom: 4px solid brand-color('red');
+			padding: 30px 4px;
+		}
+	}
+
+	&__contents {
+		padding: 38px 24px 24px;
+
+		@include media("<=tablet") {
+			padding: 38px 11px 24px;
+		}
+	}
+
+	&__contents-heading {
+		margin-bottom: 0;
+		font-weight: 900;
+	}
+
+	&__contents-subheading {
+		margin-bottom: 1em;
+	}
+
+	&__contents-description {
+		margin-bottom: 1.5em;
+	}
+
+	&__contents-toggle {
+		display: flex;
+		width: auto;
+		justify-content: center;
+		flex-wrap: nowrap;
+		margin: 0 auto;
+		min-width: 200px;
+		background-color: transparent;
+		border: 0;
+
+		color: brand-color('red');
+		font-weight: 700;
+		line-height: 22px;
+
+    cursor: pointer;
+
+		&:focus {
+			outline: 2px dotted #000;
+		}
+
+		img {
+			max-width: 0.75em;
+			margin-right: 0.875em;
+			display: inline;
+			filter: invert(16%) sepia(93%) saturate(5648%) hue-rotate(350deg) brightness(91%) contrast(89%);
+		}
+	}
+
+	&__contents-table {
+		margin-top: 1.5em;
+
+		li {
+			border: 1px solid $grey_2;
+			border-spacing: 0;
+			border-collapse: collapse;
+			display: flex;
+			list-style: none;
+			align-items: stretch;
+			padding: 0 !important;
+
+			&:nth-child(odd) {
+				background-color: $grey_1;
+			}
+		}
+
+		ul {
+			width: 100%;
+		}
+
+		&__comparison-icon {
+			flex-basis: 25%;
+			flex-shrink: 0;
+			flex-grow: 0;
+			border-left: 1px solid $grey_2;
+			padding: 0.5em 0.5em 0.5em 0.25em;
+
+			img {
+				filter: invert(24%) sepia(97%) saturate(3466%) hue-rotate(343deg) brightness(85%) contrast(104%);
+				margin: 0 auto;
+			}
+		}
+
+		&__text {
+			flex-grow: 1;
+			margin: 0;
+			padding: 0.5em;
+		}
+
+		&__subtext {
+			display: block;
+			font-size: 10px;
+			color: $black;
+			font-weight: 300;
+			line-height: 12px;
+		}
+
+		&__checkmark-text {
+			@include font-sizes(14px);
+		}
+
+		&__cta {
+			font-weight: 700;
+			margin: 1.5em 1.75em 1em;
+			line-height: 22px;
+		}
+
+		&__cta-button {
+
+		}
+	}
+}
+
+.block-comparison-card__mobile-wrapper {
+	box-shadow: $drop-shadow;
+	display: block;
+	visibility: visible;
+	margin-bottom: $block-margin;
+
+	@include media(">=tablet") {
+		display: none;
+		visibility: hidden;
+	}
+
+	.block-tabbed-content__tabs {
+		display: flex;
+		visibility: visible;
+	}
+
+	.block-comparison-card__contents {
+		padding: 16px 11px 24px;
+	}
+
+	.block-tabbed-content__tab-panels.init .wp-block-portent-block-tabbed-content--tab:first-of-type .block-tabbed-content__tab-content {
+		display: block;
+		position: relative;
+	}
+
+	.block-tabbed-content__tab {
+		font-size: 16px;
+		padding: 10px 10px 7px;
+		border: 1px solid $grey_2;
+		flex: 1;
+		justify-content: center;
+		position: relative;
+
+		&.active {
+			background-color: $grey_1;
+			color: $base-color;
+
+			&:after {
+				background-color: brand-color('red');
+				content: '';
+				position: absolute;
+				bottom: 0;
+				height: 4px;
+				width: 100%;
+
+			}
+		}
+
+		&:hover,
+		&:focus {
+			border-radius: 0;
+		}
+	}
+
+	.block-tabbed-content__tab-panels {
+		padding: 0 24px;
+	}
+}

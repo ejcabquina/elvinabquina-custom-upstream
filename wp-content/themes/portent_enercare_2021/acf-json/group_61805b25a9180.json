@@ -1,0 +1,66 @@
+{
+    "key": "group_61805b25a9180",
+    "title": "Block - Switchboard",
+    "fields": [
+        {
+            "key": "field_61805b36bd417",
+            "label": "Desktop \/ Tablet Columns",
+            "name": "desktop_columns",
+            "type": "number",
+            "instructions": "How many columns would you like the grid to have within the desktop \/ tablet view? Max 8",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 8,
+            "step": ""
+        },
+        {
+            "key": "field_61805b7d3685b",
+            "label": "Mobile Columns",
+            "name": "mobile_columns",
+            "type": "number",
+            "instructions": "How many columns would you like the grid to have within the mobile view? Max 4",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 4,
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/enercare-switchboard"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1635802127
+}

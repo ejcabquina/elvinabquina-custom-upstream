@@ -1,0 +1,122 @@
+{
+    "key": "group_610878797173e",
+    "title": "Block - Newsletter Signup",
+    "fields": [
+        {
+            "key": "field_61087888c91ef",
+            "label": "Gravity Form",
+            "name": "gravity_form",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2": "Contact \/ Support Form",
+                "3": "Email Subscribe",
+                "4": "Buy\/Rent Lead Form",
+                "6": "Plans - Maintenance and Protection Form",
+                "7": "Smarter Home Form",
+                "8": "Property Managers Form",
+                "9": "Commercial Form",
+                "10": "Commercial Support Form",
+                "12": "Rebates Lead Form",
+                "13": "Alberta HVAC Buy\/Rent Lead Form",
+                "14": "Buy\/Rent Paginated Form",
+                "15": "Plans - BOGO Form",
+                "17": "Buy\/Rent Water Treatment Paginated Form",
+                "21": "Movesnap Paginated Form",
+                "23": "EV Charger Paginated Form",
+                "24": "Billing Contact Us",
+                "25": "Home Care checklist request",
+                "26": "Invoice\/Payments",
+                "27": "Purchase and Sale",
+                "28": "Power of Attorney\/Death Certificate",
+                "29": "Plans - Plans_CIP+andHIP+",
+                "30": "Plans - Plans_CIP+orHIP+",
+                "31": "Plans - Heatmain_and_Coolmain",
+                "32": "Plans - Heatmain_or_Coolmain",
+                "33": "Plans - 9monthsWHEx",
+                "35": "Plans - 6monthsWHEx",
+                "36": "Generac",
+                "37": "SFDC Test",
+                "38": "Plans - HCC eDM Form",
+                "41": "Builder Form",
+                "44": "Plans - BOGO 2023 Form",
+                "46": "Plans - HCC Yellow Emails - Angela Test",
+                "47": "Generac Form SFDC"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_61087896211cd",
+            "label": "Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Stay In The Loop",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61087b18211ce",
+            "label": "Content",
+            "name": "content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Join our email list and be up to date on all the latest deals.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/email-signup"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1690566235
+}

@@ -1,0 +1,21 @@
+.has-focus-style--black{outline-color:#000 !important}
+.has-focus-style--white{outline-color:#fff !important}
+.has-focus-style--red{outline-color:#da1b27 !important}
+.has-focus-style *:focus{outline:2px dotted;outline-color:inherit}
+.block-locations-served__containers{border-top:1px solid #d3d1d1;display:block;margin-bottom:1em;margin-top:1em;padding-top:2em}
+.block-locations-served__locations{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}
+.block-locations-served__header{font-size:18px;letter-spacing:-0.17px;line-height:24px;font-weight:700}
+.block-locations-served__accordion-icon{display:inline-block;margin-left:1em;background-image:url(../icons/navigation/expand_less_black_24dp_rounded.svg);background-position:center center;background-repeat:no-repeat;height:12px;width:12px;-webkit-transform:rotate(0);transform:rotate(0)}
+.block-locations-served__trigger{border:0;background-color:rgba(0,0,0,0)}
+.block-locations-served__trigger[aria-expanded=false] .block-locations-served__accordion-icon{-webkit-transform:rotate(180deg);transform:rotate(180deg)}
+.block-locations-served__cta{background-color:#000;border-radius:20px;color:#fff;padding:.75em 1em .6em .9em;letter-spacing:-0.15px;font-weight:700;line-height:22px}
+.block-locations-served__cta a{color:inherit}
+.block-locations-served__cta img{display:inline-block;vertical-align:middle;width:1.5em;margin-top:-2px;-o-object-fit:contain;object-fit:contain;margin-right:.25em}
+.block-locations-served__location-list{display:block;max-height:100vh;-webkit-transition:max-height 1s;transition:max-height 1s}
+.block-locations-served__location-list[hidden]{-webkit-animation:accordionOut .45s normal ease-in-out both 1;animation:accordionOut .45s normal ease-in-out both 1;display:none;max-height:0;-webkit-transition:max-height 1s;transition:max-height 1s}
+.block-locations-served__location-list a{color:#2c2929}
+.block-locations-served__location-list li{-ms-flex-preferred-size:20%;flex-basis:20%}
+@media(min-width:768px){.block-locations-served__containers{display:-webkit-box;display:-ms-flexbox;display:flex}
+.block-locations-served__location-list{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+}@media(max-width:767px){.block-locations-served__containers[data-open=false] .block-locations-served__cta{opacity:0;-webkit-transition:opacity .2s ease-in;transition:opacity .2s ease-in}
+}

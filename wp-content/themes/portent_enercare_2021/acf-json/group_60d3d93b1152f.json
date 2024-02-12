@@ -1,0 +1,76 @@
+{
+    "key": "group_60d3d93b1152f",
+    "title": "GMB Locations",
+    "fields": [
+        {
+            "key": "field_60d3d95c278bf",
+            "label": "GMB Location ID",
+            "name": "gmb_location_id",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60d3d9b9278c1",
+            "label": "Leave Review URL",
+            "name": "gmb_leave_review_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_60d3d9c8278c2",
+            "label": "View Reviews URL",
+            "name": "gmb_view_reviews_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "gmb_location"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1629411436,
+    "local_file": "\/var\/www\/html\/wp-content\/themes\/portent_enercare_2021\/acf-json\/group_60d3d93b1152f.json"
+}

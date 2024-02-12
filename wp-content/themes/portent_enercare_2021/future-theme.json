@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "settings": {
+	"layout": {
+	  "contentSize": "800px",
+	  "wideSize": "1168px"
+	},
+	"spacing": {
+	  "customMargin": false,
+	  "customPadding": false,
+	  "units": [ "px", "em", "rem", "vh", "vw" ]
+	},
+	"typography": {
+	  "customFontSize": true,
+	  "customLineHeight": false,
+	  "dropCap": true,
+	  "fontSizes": []
+	},
+	"color": {
+	  "custom": false,
+	  "palette": [
+		{
+		  "name": "Red",
+		  "slug": "red",
+		  "color": "#DC1C28"
+		},
+		{
+		  "name": "Dark Red",
+		  "slug": "dark-red",
+		  "color": "#C30D18"
+		},
+		{
+		  "name": "Darker Red",
+		  "slug": "darker-red",
+		  "color": "#AB000B"
+		},
+		{
+		  "name": "Light Red",
+		  "slug": "light-red",
+		  "color": "#F6323E"
+		},
+		{
+		  "name": "Lighter Red",
+		  "slug": "lighter-red",
+		  "color": "#FE4B56"
+		},
+		{
+		  "name": "Blue",
+		  "slug": "blue",
+		  "color": "#B9D9EC"
+		},
+		{
+		  "name": "Dark Blue",
+		  "slug": "dark-blue",
+		  "color": "#A9CDE2"
+		},
+		{
+		  "name": "Darker Blue",
+		  "slug": "darker-blue",
+		  "color": "#95BCD3"
+		},
+		{
+		  "name": "Light Blue",
+		  "slug": "light-blue",
+		  "color": "#C6E3F4"
+		},
+		{
+		  "name": "Lighter Blue",
+		  "slug": "lighter-blue",
+		  "color": "#D1EBFB"
+		},
+		{
+		  "name": "Grey (Text)",
+		  "slug": "grey",
+		  "color": "#29292C"
+		},
+		{
+		  "name": "Black",
+		  "slug": "black",
+		  "color": "#000000"
+		},
+		{
+		  "name": "Grey 80%",
+		  "slug": "grey-80",
+		  "color": "#3D3D43"
+		},
+		{
+		  "name": "Grey 70%",
+		  "slug": "grey-70",
+		  "color": "#505156"
+		},
+		{
+		  "name": "Grey 60%",
+		  "slug": "grey-60",
+		  "color": "#646469"
+		},
+		{
+		  "name": "Grey 40%",
+		  "slug": "grey-40",
+		  "color": "#B3B1B1"
+		},
+		{
+		  "name": "Grey 30%",
+		  "slug": "grey-30",
+		  "color": "#D3D1D1"
+		},
+		{
+		  "name": "Grey 20%",
+		  "slug": "grey-20",
+		  "color": "#E6E4E4"
+		},
+		{
+		  "name": "Grey 10%",
+		  "slug": "grey-10",
+		  "color": "#F5F2F2"
+		},
+		{
+		  "name": "White",
+		  "slug": "white",
+		  "color": "#FFFFFF"
+		}
+	  ]
+	}
+  }
+}

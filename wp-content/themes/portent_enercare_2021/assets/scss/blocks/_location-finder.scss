@@ -1,0 +1,139 @@
+$block-location-finder--max-width: 324px;
+
+.block-location-finder {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto 1fr;
+	justify-content: center;
+	align-items: center;
+	background-color: $black;
+
+	@include media('>=tablet') {
+		grid-template-columns: 50% 50%;
+	}
+
+	&__content {
+		background-color: $black;
+		color: $white;
+		order: 1;
+		flex-basis: 50%;
+		padding: 2em 1.5em;
+		text-align: center;
+
+		@include media('>=tablet') {
+			order: 0;
+			padding: 13% 3% 13% calc((100vw - #{$grid-width}) / 2 );
+			text-align: left;
+		}
+	}
+
+	&__list-header {
+		@include font-sizes(1.125em);
+	}
+
+	&__form {
+		background-color: $black;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 100%;
+		text-align: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-right: calc((100vw - #{$grid-width}) / 2 );
+
+		@include media('<tablet') {
+			background-image: none !important;
+			justify-content: center;
+		}
+	}
+
+	&__header {
+		@include font-sizes(1.5em);
+	}
+
+	&__text {
+		max-width: $block-location-finder--max-width;
+	}
+
+	&__icon {
+		margin: 0 auto 0.65em;
+	}
+
+	&__input {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border-color: #7F7F7F;
+	}
+
+	&__submit {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		color: $white;
+		border: 1px solid brand-color('red');
+		line-height: 18px;
+	}
+
+	&__label {
+		@include font-sizes(0.875em);
+	}
+
+	&__label-example {
+		color: $grey_6;
+		@include font-sizes(0.875em);
+	}
+
+	&__list {
+		column-count: 2;
+		column-fill: balance;
+		padding-left: 0;
+		text-align: left;
+
+		@include media('>=tablet') {
+			column-count: 3;
+		}
+
+		li {
+			font-size: 0.85em;
+			list-style: none;
+		}
+	}
+
+	&__submit {
+		flex-basis: 96px;
+	}
+
+	&__postal-form {
+
+		text-align: left;
+
+		label {
+			font-size: 0.85em;
+		}
+
+		.field-group {
+			display: flex;
+		}
+	}
+
+	&__form-container {
+		background-color: $white;
+		border-top: 8px solid brand-color('red');
+		box-shadow: $drop-shadow;
+		padding: 5%;
+		margin: 2em 0 0 0;
+		width: 85%;
+
+		@include media('>=tablet') {
+			padding: 8% 10%;
+			margin: 0;
+			width: 100%;
+			max-width: 450px;
+		}
+	}
+}
+
+//Higher Specificity Selectors
+ul.block-location-finder__list {
+	padding-left: 0;
+}

@@ -1,0 +1,21 @@
+.wp-block-cover {
+
+	@include media("<tablet") {
+		background-color: $black;
+	}
+
+	&__inner-container {
+		margin: calc( 2 * #{$block-margin} ) calc(50% - 50vw);
+		max-width: $grid-width;
+		width: auto;
+
+		@include media(">=tablet") {
+			margin: calc( 2 * #{$block-margin}) calc(25% - 25vw);
+		}
+	}
+
+	//Very special rule for cards with black background used in cover blocks
+	.block-card.has-black-background-color {
+		background-color: rgba(0,0,0,0.8);
+	}
+}

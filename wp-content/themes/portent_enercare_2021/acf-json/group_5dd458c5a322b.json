@@ -1,0 +1,486 @@
+{
+    "key": "group_5dd458c5a322b",
+    "title": "Site Options",
+    "fields": [
+        {
+            "key": "field_63890a5aa5e7c",
+            "label": "OBA Banner Toggle",
+            "name": "oba_banner_toggle",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "This controls whether the OBA banner displays on the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_63890a6fa5e7d",
+            "label": "OBA Default Banner Text",
+            "name": "oba_banner_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63890a5aa5e7c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5dd458cd3c3fd",
+            "label": "Default Image",
+            "name": "enercare_default_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6182bba18747c",
+            "label": "Default Commercial Phone Number",
+            "name": "default_commercial_phone_number",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6182bc1b953a2",
+            "label": "Floating CTA Link for Commercial",
+            "name": "floating_cta_link_commercial",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_613fa935315dc",
+            "label": "Default Phone Number",
+            "name": "default_phone_number",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "In places where a phone number CTA is displayed, if no override or specific number is present this number will be used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6140ff7bc0682",
+            "label": "Banner Toggle",
+            "name": "banner_toggle",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "This controls whether the banner (ie. covid) displays on the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6140ffb9c0683",
+            "label": "Default Banner Text",
+            "name": "banner_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6140ff7bc0682",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_611ad42cf41e1",
+            "label": "Footer",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_611ad438f41e2",
+            "label": "Floating CTA Link",
+            "name": "floating_cta_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_611ad4ccf41e3",
+            "label": "Floating CTA Icon",
+            "name": "floating_cta_icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 30,
+            "min_height": 30,
+            "min_size": "",
+            "max_width": 30,
+            "max_height": 30,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_614b6b444f6e6",
+            "label": "Default Logo",
+            "name": "enercare_default_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6564fe47272cc",
+            "label": "Back to top button",
+            "name": "btt_button_on",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_61831ae2035f7",
+            "label": "Archives",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61831afc035f8",
+            "label": "Location Archive Title",
+            "name": "location_archive_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61831b20035f9",
+            "label": "Location Archive Description",
+            "name": "location_archive_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_610846ae5d9ad",
+            "label": "Default Contact Form",
+            "name": "default_contact_form",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "In places where a contact form is needed if no override or specific form is present this form will be used. This field is populated by active gravity forms.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2": "Contact \/ Support Form",
+                "3": "Email Subscribe",
+                "4": "Buy\/Rent Lead Form",
+                "6": "Plans - Maintenance and Protection Form",
+                "7": "Smarter Home Form",
+                "8": "Property Managers Form",
+                "9": "Commercial Form",
+                "10": "Commercial Support Form",
+                "12": "Rebates Lead Form",
+                "13": "Alberta HVAC Buy\/Rent Lead Form",
+                "14": "Buy\/Rent Paginated Form",
+                "15": "Plans - BOGO Form",
+                "17": "Buy\/Rent Water Treatment Paginated Form",
+                "23": "EV Charger Paginated Form",
+                "24": "Billing Contact Us",
+                "25": "Home Care checklist request",
+                "26": "Invoice\/Payments",
+                "27": "Purchase and Sale",
+                "28": "Power of Attorney\/Death Certificate",
+                "29": "Plans - Plans_CIP+andHIP+",
+                "30": "Plans - Plans_CIP+orHIP+",
+                "31": "Plans - Heatmain_and_Coolmain",
+                "32": "Plans - Heatmain_or_Coolmain",
+                "33": "Plans - 9monthsWHEx",
+                "35": "Plans - 6monthsWHEx",
+                "36": "Generac",
+                "37": "SFDC Test",
+                "38": "Plans - HCC eDM Form",
+                "41": "Builder Form",
+                "44": "Plans - BOGO 2023 Form",
+                "47": "Generac Form SFDC",
+                "48": "Plans - HCC HIP+",
+                "49": "Plans - HCC CIP+",
+                "50": "Plans - HCC PDP or ELP",
+                "52": "Peak Perks Form",
+                "53": "Plans - Customer Appreciation Plans offer",
+                "54": "Buy\/Rent Lead Form For Jay's testing - using SFDC UAT environment",
+                "56": "Plans - Blue Jays secondary prizing"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_610847239c1eb",
+            "label": "Default Email Form",
+            "name": "default_email_form",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "In places where a newsletter signup form is needed if no override or specific form is present this form will be used. This field is populated by active gravity forms.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2": "Contact \/ Support Form",
+                "3": "Email Subscribe",
+                "4": "Buy\/Rent Lead Form",
+                "6": "Plans - Maintenance and Protection Form",
+                "7": "Smarter Home Form",
+                "8": "Property Managers Form",
+                "9": "Commercial Form",
+                "10": "Commercial Support Form",
+                "12": "Rebates Lead Form",
+                "13": "Alberta HVAC Buy\/Rent Lead Form",
+                "14": "Buy\/Rent Paginated Form",
+                "15": "Plans - BOGO Form",
+                "17": "Buy\/Rent Water Treatment Paginated Form",
+                "23": "EV Charger Paginated Form",
+                "24": "Billing Contact Us",
+                "25": "Home Care checklist request",
+                "26": "Invoice\/Payments",
+                "27": "Purchase and Sale",
+                "28": "Power of Attorney\/Death Certificate",
+                "29": "Plans - Plans_CIP+andHIP+",
+                "30": "Plans - Plans_CIP+orHIP+",
+                "31": "Plans - Heatmain_and_Coolmain",
+                "32": "Plans - Heatmain_or_Coolmain",
+                "33": "Plans - 9monthsWHEx",
+                "35": "Plans - 6monthsWHEx",
+                "36": "Generac",
+                "37": "SFDC Test",
+                "38": "Plans - HCC eDM Form",
+                "41": "Builder Form",
+                "44": "Plans - BOGO 2023 Form",
+                "47": "Generac Form SFDC",
+                "48": "Plans - HCC HIP+",
+                "49": "Plans - HCC CIP+",
+                "50": "Plans - HCC PDP or ELP",
+                "52": "Peak Perks Form",
+                "53": "Plans - Customer Appreciation Plans offer",
+                "54": "Buy\/Rent Lead Form For Jay's testing - using SFDC UAT environment",
+                "56": "Plans - Blue Jays secondary prizing"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1701120511
+}

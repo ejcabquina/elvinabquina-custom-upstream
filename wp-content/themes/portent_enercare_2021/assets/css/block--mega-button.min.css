@@ -1,0 +1,22 @@
+.has-focus-style--black{outline-color:#000 !important}
+.has-focus-style--white{outline-color:#fff !important}
+.has-focus-style--red{outline-color:#da1b27 !important}
+.has-focus-style *:focus{outline:2px dotted;outline-color:inherit}
+.block-mega-button{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;padding:0 !important;width:auto}
+.block-mega-button__link{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;text-decoration:none;padding:.5em 1em;border-radius:20px;-webkit-transition:background-color .2s ease;transition:background-color .2s ease;border:2px solid #bdbdbd}
+.block-mega-button__link:hover{background-color:#e6e4e4;border:2px solid rgba(0,0,0,0);-webkit-transition:background-color .3s ease;transition:background-color .3s ease}
+.block-mega-button__link:focus{outline:3px dotted #bdbdbd}
+.block-mega-button__link.has-grey-10-background-color:hover{background-color:#fff}
+.block-mega-button.alignleft{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
+.block-mega-button.aligncenter{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.block-mega-button.alignright{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
+.block-mega-button--width-constrain a{min-width:150px;max-width:150px}
+.block-mega-button--width-auto a{min-width:120px;width:auto}
+.block-mega-button--width-full{width:100%}
+.block-mega-button--width-full a{width:100%}
+.block-mega-button.is-style-shadowed{-webkit-box-shadow:none;box-shadow:none}
+.block-mega-button.is-style-shadowed a{-webkit-box-shadow:0 4px 8px 0 rgba(56,61,67,.3);box-shadow:0 4px 8px 0 rgba(56,61,67,.3)}
+.block-mega-button__image{max-height:32px;max-width:32px;margin:.5em auto}
+.block-mega-button__text{display:block;color:#000;font-size:.97rem;line-height:24px;font-weight:700;text-align:center}
+@media(min-width:768px){.block-mega-button__image{max-width:40px;max-height:40px;width:40px;height:40px;aspect-ratio:1/1;-o-object-fit:contain;object-fit:contain;-o-object-position:center center;object-position:center center}
+}

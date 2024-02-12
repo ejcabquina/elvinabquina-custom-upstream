@@ -1,0 +1,174 @@
+{
+    "key": "group_61114ebbed45b",
+    "title": "Schema",
+    "fields": [
+        {
+            "key": "field_61114ec7df9e5",
+            "label": "Schema.org JSON",
+            "name": "schema",
+            "type": "textarea",
+            "instructions": "Use this text area to paste in Schema.org JSON that will appear in the <HEAD> of the HTML page.\r\n\r\nUse these variables for dynamic results:\r\n\r\nAggregateRating schema:\r\n%ratingValue%\r\n%ratingCount%",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_6111519559536",
+            "label": "AggregateRating",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_611151e759537",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "{\r\n  \"@context\": \"https:\/\/schema.org\/\",\r\n  \"@type\": \"AggregateRating\",\r\n  \"itemReviewed\": {\r\n    \"@type\": \"LocalBusiness\",\r\n    \"@id\": \"https:\/\/www.enercare.ca\/locations\/barrie\",\r\n    \"url\": \"https:\/\/www.enercare.ca\/locations\/barrie\",\r\n    \"name\": \"Enercare Barrie\",\r\n    \"telephone\": \"1-866-633-1553\",\r\n    \"image\": {\r\n        \"@type\": \"ImageObject\",\r\n        \"url\": \"https:\/\/www.enercare.ca\/themes\/custom\/enercare\/images\/enercare-logo.png\"\r\n    },\r\n    \"openingHoursSpecification\": {\r\n        \"@type\": \"OpeningHoursSpecification\",\r\n        \"dayOfWeek\": \"Mo-Su\",\r\n        \"opens\": \"All day\"\r\n        },\r\n    \"address\": {\r\n        \"@type\": \"PostalAddress\",\r\n        \"addressLocality\": \"Barrie\",\r\n        \"addressRegion\": \"ON\",\r\n        \"addressCountry\": \"Canada\"\r\n    }\r\n  },\r\n  \"ratingValue\": \"%ratingValue%\",\r\n  \"bestRating\": \"5\",\r\n  \"ratingCount\": \"%ratingCount%\"\r\n}",
+            "new_lines": "br",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6111522559538",
+            "label": "FAQ",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6111523459539",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "br",
+            "esc_html": 0
+        },
+        {
+            "key": "field_61115292550a1",
+            "label": "Schema Examples",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_611181542278b",
+            "label": "Include FAQ Schema?",
+            "name": "include_faq_schema",
+            "type": "true_false",
+            "instructions": "If there are any FAQ blocks being used on this page, this field controls if schema should be placed in the <HEAD>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "faq"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "campaign"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "gmb_location"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "gmb_review"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "block_area"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1629483332,
+    "local_file": "C:wampwww\/wp-content\/themes\/portent_enercare_2021\/acf-json\/group_61114ebbed45b.json"
+}

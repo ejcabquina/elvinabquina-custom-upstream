@@ -1,0 +1,140 @@
+{
+    "key": "group_616c9e16925b8",
+    "title": "Global Appointment Banner Options",
+    "fields": [
+        {
+            "key": "field_6170918ce8b92",
+            "label": "Emergency \/ Prominent",
+            "name": "appointnent_banner_is_emergency",
+            "type": "true_false",
+            "instructions": "Turn this setting on if the banner contains an emergency or very high priority message. If this setting is turned on all overridden controls for the banner on all pages will be ignored while this setting is enabled.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_616c9e27ee2a1",
+            "label": "Icon",
+            "name": "appointment_banner_icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_616c9e3bee2a2",
+            "label": "Title",
+            "name": "appointment_banner_title",
+            "type": "text",
+            "instructions": "A very short title \/ call to action. This area is tightly controlled to maintain design consistency. 64 Character max",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 64
+        },
+        {
+            "key": "field_616c9e7eee2a3",
+            "label": "Link",
+            "name": "appointment_banner_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_616c9ec7ee2a4",
+            "label": "Link Text",
+            "name": "appointment_banner_link_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 12
+        },
+        {
+            "key": "field_616c9ee4ee2a5",
+            "label": "Display?",
+            "name": "appointment_banner_toggle",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1634773145,
+    "local_file": "\/Users\/jeremiah\/Local Sites\/enercare-2021\/app\/public\/wp-content\/themes\/portent_enercare_2021\/acf-json\/group_616c9e16925b8.json"
+}

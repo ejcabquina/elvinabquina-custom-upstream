@@ -1,0 +1,32 @@
+{
+	"apiVersion": 2,
+	"name": "enercare-google-reviews/ecreviews-block",
+	"version": "0.1.0",
+	"title": "Enercare Reviews Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "This block will populate GMB reviews based on the selected location in a carousel",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "enercare-google-reviews",
+  "attributes": {
+    "locationId": {
+      "type": "number"
+    },
+	"title": {
+	  "type": "text",
+	  "source": "html",
+	  "selector": ".block-reviews__title"
+	},
+	"dots": {
+	  "type": "boolean"
+	},
+	"arrows": {
+	  "type": "boolean"
+	}
+  },
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

@@ -1,0 +1,777 @@
+:root {
+	--plyr-color-main: #C30D18;
+}
+
+//Tabbed Content
+.block-tabbed-content__tab__title {
+	display: none;
+}
+
+.block-tabbed-content__tabs {
+	display: none;
+	margin-bottom: 32px;
+	visibility: hidden;
+
+	@include media('>mobile_menu') {
+		display: flex;
+		margin-bottom: 32px;
+		visibility: visible;
+	}
+}
+
+.block-tabbed-content__tabs.init {
+
+	.block-tabbed-content__tab:first-of-type,
+	&[data-has-defaults=false] .block-tabbed-content__tab:first-of-type {
+		background-color: brand-color('red');
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		color: $white;
+
+		img {
+			filter: brightness(0) invert(1);
+		}
+
+		&:hover,
+		&:focus {
+			color: $white;
+
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+
+	/**
+	Handling Default Tab Styles
+	 */
+	.block-tabbed-content__tab[data-default=true] {
+		background-color: brand-color('red');
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		color: $white;
+
+		img {
+			filter: brightness(0) invert(1);
+		}
+
+		&:hover,
+		&:focus {
+			color: $white;
+
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+
+	.block-tabbed-content__tab[data-default=false] {
+		border: 2px solid #ccc;
+		background-color: #eee;
+		color: unset;
+
+		img {
+			filter: hue-rotate(180deg) contrast(100%) brightness(0) grayscale(100%);
+		}
+
+		&:hover,
+		&:focus {
+			color: $white;
+			background-color: #333;
+
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+}
+
+.block-tabbed-content__tabs.init--dirty {
+	@include media('>mobile_menu') {
+		.block-tabbed-content__tab:first-of-type {
+			border-bottom: 2px solid brand-color('red');
+			color: brand-color('red');
+
+			img {
+				filter: hue-rotate(0) contrast(100%) brightness(100%) grayscale(0);
+			}
+
+			&:hover,
+			&:focus {
+				color: $white;
+
+				img {
+					filter: brightness(0) invert(1);
+				}
+			}
+		}
+	}
+}
+
+.block-tabbed-content__tab {
+	border:none;
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	font-weight: 700;
+	@include font-sizes(24px);
+	padding: 8px 24px 4px;
+	border: 2px solid #ccc;
+	background-color: #eee;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
+	img {
+		filter: hue-rotate(180deg) contrast(100%) brightness(0) grayscale(100%);
+		width: 30px;
+		height: 30px;
+		margin: 0 10px 0 0;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: #333;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		color: $white;
+
+		img {
+			filter: brightness(0) invert(1);
+		}
+	}
+
+	&.active {
+		background-color: brand-color('red');
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		color: $white;
+
+		img {
+			filter: brightness(0) invert(1);
+		}
+
+		&:hover,
+		&:focus {
+			color: $white;
+
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+}
+
+.block-tabbed-content__tab-panels.init {
+
+	&[data-has-defaults=false] .block-tabbed-content__panel:first-of-type .block-tabbed-content__tab-content {
+		@include media('>mobile_menu') {
+			position: relative;
+			display: block;
+		}
+	}
+
+	.block-tabbed-content__panel:first-of-type .block-tabbed-content__tab-content {
+
+		position: relative;
+		display: block;
+	}
+
+	.block-tabbed-content__panel[data-default="false"] .block-tabbed-content__tab-content {
+		display: none;
+		position: absolute;
+	}
+
+	.block-tabbed-content__panel[data-default="true"] .block-tabbed-content__tab-content {
+		position: relative;
+		display: block;
+	}
+
+	.block-tabbed-content__panel:first-of-type .block-tabbed-content__panel__mobile-toggle .block-tabbed-content__panel__toggle .block-tabbed-content__panel__title {
+		color: brand-color('red');
+	}
+
+	.block-tabbed-content__panel:first-of-type .block-tabbed-content__panel__mobile-toggle .block-tabbed-content__panel__toggle .block-tabbed-content__panel__arrow {
+		transform: rotate(90deg);
+	}
+}
+
+.block-tabbed-content__panel {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+.block-tabbed-content__tab-content {
+	display: none;
+	position: absolute;
+
+	&.active {
+		display: block;
+		position: relative;
+	}
+}
+
+/**
+* Glider Styles
+ */
+.glider-dot:focus, .glider-dot:hover {
+	background-color: #6E6E6E;
+}
+
+.glider-dot:focus {
+	outline: 2px dotted #000;
+}
+
+.block-reviews__dots button,
+.block-carousel__dots button {
+	background-color: #8A8A8A;
+}
+
+/**
+Mobile State
+*/
+.block-tabbed-content__panel {
+
+	$mobile-tab-parent: &;
+
+	&__mobile-toggle {
+		display: block;
+		border-bottom: 1px solid $grey_1;
+		margin-bottom: 1em;
+		visibility: visible;
+
+		@include media('>mobile_menu') {
+			display: none;
+			visibility: hidden;
+		}
+	}
+
+	&__toggle {
+		display: flex;
+		border: none;
+		background-color: transparent;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		padding: 0.875em 4px;
+
+		&:hover,
+		&:focus {
+			#{$mobile-tab-parent}__title {
+				color: brand-color('red');
+			}
+		}
+
+		&.active {
+			#{$mobile-tab-parent}__arrow {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	&__title {
+		flex-grow: 1;
+		text-align: left;
+		@include font-sizes(1.2em);
+		letter-spacing: -0.17px;
+		line-height: 24px;
+		margin-bottom: 0;
+	}
+
+	&__arrow {
+		height: 12px;
+		width: 12px;
+	}
+
+	&__icon {
+		filter: hue-rotate(180deg) contrast(100%) brightness(0) grayscale(100%);
+		margin-right: 0.75em;
+	}
+}
+
+
+/*
+Slide
+ */
+.block-slide__wrapper {
+	position: relative;
+}
+
+.block-slide__image {
+	position: absolute;
+	object-fit: cover;
+	object-position: center center;
+	height: 100%;
+	width: 100%;
+}
+
+/**
+Cover
+ */
+.wp-block-cover {
+	@include media('<tablet') {
+		padding: 0;
+		flex-direction: column;
+		justify-content: flex-start;
+		min-height: 0 !important;
+	}
+
+	img.wp-block-cover__image-background {
+		@include media('<tablet') {
+			position: relative;
+			height: 214px;
+		}
+	}
+
+	.wp-block-columns {
+		margin-bottom: 1em;
+
+		@include media('<tablet') {
+			margin-bottom: 0.25em;
+		}
+	}
+
+	.wp-block-column {
+
+		@include media('<tablet') {
+			margin-bottom: 0.25em;
+		}
+	}
+
+	.wp-block-cover__inner-container {
+		padding: 1em 1em 0.25em 1em;
+		margin-bottom: 0;
+
+		@include media('<tablet') {
+			padding: 0em 1em 0.25em 1em;
+			margin-top: 24px;
+		}
+	}
+
+	/**
+	Very specific use case for card in mobile viewport
+	 */
+	.block-card {
+		@include media('<tablet') {
+			padding-top: 1em;
+			padding-bottom: 0.25em;
+		}
+	}
+
+	@include media('>tablet') {
+		min-height: 640px;
+	}
+
+	/**
+	Helper Class to hide the color shade in mobile. This does not adjust the shade. Instead it pulls the image up from underneath
+	 */
+	&--hide-shade-mobile {
+		@include media('<tablet') {
+			.wp-block-cover__image-background {
+				z-index: 2;
+			}
+		}
+	}
+}
+
+/**
+Grids Plugin Block
+ */
+.grids-section {
+	margin: $block-margin 0;
+}
+
+/**
+Blog Posts
+ */
+
+.wp-admin .block-blog-posts {
+
+	a {
+		pointer-events: none;
+	}
+}
+
+.block-blog-posts {
+
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	&--row {
+		display: grid;
+		grid-template-columns: repeat( auto-fit, minmax( 250px, 1fr) );
+		grid-column-gap: 1.5em;
+
+		&.is_mobile_carousel {
+			@include media('<phone') {
+				display: block;
+			}
+		}
+	}
+
+	.glider-track {
+		padding-bottom: 1em;
+	}
+
+	&__glider-dots {
+		display: flex;
+
+		@include media('>=tablet') {
+			display: none;
+		}
+	}
+
+	&__archive-links {
+		text-align: center;
+		width: 100%;
+	}
+
+	&__archive-link {
+		margin: 0 auto;
+	}
+
+	&__wrapper {
+		position: relative;
+
+		//Slider Controls
+		.block-carousel__prev {
+			width: 30px;
+			height: 30px;
+			display: block;
+			left: 10px;
+
+			@include media('>=tablet') {
+				display: none;
+			}
+		}
+
+		.block-carousel__next {
+			width: 30px;
+			height: 30px;
+			display: block;
+			right: 10px;
+
+			@include media('>=tablet') {
+				display: none;
+			}
+		}
+	}
+
+	&__post {
+		$single-post: &;
+		display: flex;
+		background-color: $white;
+		position: relative;
+		margin: 1.5em 0;
+		box-shadow: $drop-shadow;
+
+		&.glider-slide {
+			justify-content: flex-start;
+			margin: 0 0.5em;
+		}
+
+		&__summary {
+			flex-basis: 50%;
+			padding: 1em;
+		}
+
+		&__title {
+			@include font-sizes(1.1rem);
+			font-weight: 700;
+			border: none !important;
+			line-height: 1.5rem;
+		}
+
+		&__link {
+			@include font-sizes(1.1rem);
+			font-weight: 700;
+			line-height: inherit;
+			text-decoration: none;
+			color: $grey_10;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			&:hover,
+			&:focus {
+				color: $highlight;
+			}
+		}
+
+		&__image {
+			height: auto;
+			object-fit: cover;
+			object-position: center center;
+			min-width: 100%;
+			min-height: 248px;
+
+			&--1-1 {
+				aspect-ratio: 1 / 1;
+			}
+
+			&--2-3 {
+				aspect-ratio: 3 / 2;
+			}
+
+			@include media('<=tablet') {
+				min-height: 173px;
+			}
+		}
+
+		&__post-meta {
+			display: flex;
+			margin: 0.25em 0 1em 0;
+
+			.avatar {
+				aspect-ratio: 1 / 1;
+				border-radius: 100%;
+				height: 32px;
+				width: 32px;
+				margin-right: 0.5em;
+			}
+		}
+
+		&__author-meta {
+
+			&__name {
+				font-weight: 700;
+				line-height: 1;
+			}
+
+			&__date,
+			.rt-reading-time {
+				display: inline-block;
+				@include font-sizes(0.75em);
+			}
+
+			.rt-reading-time{
+
+				&:before {
+					content: '•';
+					display: inline-block;
+					margin: 0 0.25em 0 0.5em;
+				}
+			}
+		}
+
+		&--horizontal {
+			flex-direction: row;
+
+			.block-blog-posts {
+				&__post {
+					&__link {
+						display: flex;
+						flex-direction: row;
+					}
+				}
+			}
+
+			#{$single-post}__image {
+				width: 50%;
+				min-height: 212px;
+				min-width: auto;
+
+				@include media('<=tablet') {
+					width: 100%;
+				}
+			}
+
+			#{$single-post}__title {
+				line-height: 1.75rem;
+				font-size: 1.250em;
+				letter-spacing: -0.19px;
+			}
+
+			@include media('<=tablet') {
+				flex-direction: column;
+			}
+		}
+
+		&--vertical {
+			flex-direction: column;
+
+			.block-blog-posts {
+				&__post {
+					&__link {
+						font-weight: 300;
+
+						&:hover,
+						&:focus {
+							> .block-blog-posts__post__summary {
+								> .single-post__date {
+									color: $grey_10;
+								}
+								> .block-blog-posts__post__title {
+									color: $highlight;
+								}
+
+								> .block-blog-posts__post__except {
+									color: $grey_10;
+								}
+
+								> .block-blog-posts__post__author-meta__date {
+									color: $grey_10;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&--minimal {
+
+			#{$single-post}__title {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+/**
+Youtube Lazy
+ */
+.block-youtube-lazy {
+
+	&.aligncenter {
+		float: none !important;
+		margin: 0 auto;
+	}
+
+	&.alignright {
+		float: none !important;
+		margin:0 0 0 auto;
+	}
+}
+
+/**
+Switchboard
+ */
+
+ .wp-block-group.has-background:has( .block-switchboard ) .block-switchboard {
+
+	.block-mega-button a {
+		background-color: #fff;
+		border: 2px solid $grey_5;
+	}
+ }
+
+ .wp-block-group.has-background .block-switchboard {
+	.block-mega-button a {
+		background-color: #fff !important;
+		border: 2px solid $grey_5 !important;
+
+		&:hover {
+			background-color: $grey_2 !important;
+		}
+	}
+}
+
+.block-switchboard {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $content-width;
+
+	&.alignwide {
+		max-width: $grid-width;
+	}
+}
+
+.block-switchboard__container {
+
+	display: grid;
+	justify-items: center;
+	padding-left: 0 !important; // !important used to override theme <ul> styles without using <ul> tag
+	margin-bottom: 0 !important; // !important used to override theme <ul> styles without using <ul> tag
+	grid-column-gap: 0.75em;
+	grid-row-gap: 0.75em;
+
+	@for $i from 1 through 8 {
+		&--desktop-col-#{$i} {
+			@include media('>=tablet') {
+				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+		}
+
+		&--mobile-col-#{$i} {
+
+			@include media('<tablet') {
+				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+		}
+	}
+
+	//Forcing mega button behavior while inside the switchboard
+	.block-mega-button,
+	.block-mega-button a {
+		width: 100%;
+	}
+}
+
+/**
+Responsive Cover
+ */
+.wp-block-portent-block-portent-responsive-cover {
+
+	justify-content: center;
+
+	@include media("<tablet") {
+		background-color: $black;
+		padding: 0;
+		flex-direction: column;
+		justify-content: flex-start;
+		min-height: 0 !important;
+	}
+
+	&__inner-blocks {
+		margin: calc( 2 * #{$block-margin} ) calc(50% - 50vw);
+		max-width: $grid-width;
+		width: 100%;
+
+		@include media(">=tablet") {
+			margin: calc( 2 * #{$block-margin}) calc(25% - 25vw);
+		}
+	}
+
+	&__inner-blocks {
+		padding: 1em 1em 0.25em 1em;
+		margin-bottom: 0;
+
+		@include media('<tablet') {
+			padding: 0em 1em 0.25em 1em;
+			margin-top: 24px;
+		}
+	}
+
+	//Very special rule for cards with black background used in cover blocks
+	.block-card.has-black-background-color {
+		background-color: rgba(0,0,0,0.8);
+	}
+
+	&__picture {
+		@include media('<tablet') {
+			position: relative;
+			height: 214px;
+		}
+	}
+
+	/**
+	Very specific use case for card in mobile viewport
+	 */
+	.block-card {
+		@include media('<tablet') {
+			padding-top: 1em;
+			padding-bottom: 0.25em;
+		}
+	}
+}
+

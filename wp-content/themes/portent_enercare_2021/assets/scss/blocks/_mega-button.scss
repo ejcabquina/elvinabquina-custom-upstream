@@ -1,0 +1,112 @@
+.block-mega-button {
+
+	display: inline-flex;
+	padding: 0 !important;
+	width: auto;
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		text-decoration: none;
+		padding: 0.5em 1em;
+		border-radius: $border-radius;
+		transition: background-color 0.2s ease;
+		border: 2px solid $grey_5;
+
+		&:hover {
+			background-color: $grey_2;
+			border: 2px solid transparent;
+			transition: background-color 0.3s ease;
+		}
+
+		&:focus {
+			outline: 3px dotted $grey_5;
+		}
+
+		&.has-grey-10-background-color:hover {
+			background-color: $white;
+		}
+	}
+
+	&.alignleft {
+		justify-content: flex-start;
+	}
+
+	&.aligncenter {
+		justify-content: center;
+	}
+
+	&.alignright {
+		justify-content: flex-end;
+	}
+
+	/**
+	Widths
+	 */
+	&--width-constrain {
+
+		a {
+			min-width: 150px;
+			max-width: 150px;
+		}
+	}
+
+	&--width-auto {
+
+		a {
+			min-width: 120px;
+			width: auto;
+		}
+	}
+
+	&--width-full {
+
+		width: 100%;
+		a {
+			width: 100%;
+		}
+	}
+
+	/**
+	Have to reset block styles and push them down to link element
+	 */
+	&.is-style-shadowed {
+
+		box-shadow: none;
+		a {
+			box-shadow: 0 4px 8px 0 rgba(56, 61, 67, 0.30);
+		}
+	}
+	@include media(">=tablet") {
+		//max-width: 144px;
+		//max-height: 128px;
+	}
+
+	&__image {
+		max-height: 32px;
+		max-width: 32px;
+		margin: 0.5em auto;
+
+		@include media(">=tablet") {
+			max-width: 40px;
+			max-height: 40px;
+			width: 40px;
+			height: 40px;
+			aspect-ratio: 1 / 1;
+			object-fit: contain;
+			object-position: center center;
+
+		}
+	}
+
+	&__text {
+		display: block;
+		color: #000;
+		font-size: 0.97rem;
+		line-height: 24px;
+		font-weight: 700;
+		text-align: center;
+	}
+}

@@ -1,0 +1,314 @@
+/* Button
+--------------------------------------------- */
+
+$default: nth( nth( $brand_colors, 1 ), 1 ); // first color in $brand_colors array
+
+.wp-block-button__link {
+	//border: 2px solid brand-color( $default, 'darken' );
+	border-radius: 30px;
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 24px;
+	padding: 0.750em 1.50em 0.6em;
+	text-decoration: none;
+	letter-spacing: -.17px;
+
+	.is-style-full &,
+	&.full {
+		display: block;
+		width: 100%;
+	}
+
+	&:not(.has-text-color) {
+		color: white;
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	&:not(.has-background) {
+		background-color: brand-color( $default );
+
+		&:hover,
+		&:focus {
+			background-color: brand-color( $default, 'darken' );
+		}
+	}
+
+	@each $name, $color in $brand_colors {
+
+		&.has-#{$name}-color:hover,
+		&.has-#{$name}-color:focus {
+			color: $color;
+		}
+
+		&.has-#{$name}-background-color:hover,
+		&.has-#{$name}-background-color:focus {
+			background-color: brand-color( $name, 'darken' );
+		}
+	}
+
+}
+
+/**
+Sub Headings
+ */
+
+.is-style-subhead1 {
+	@include font-sizes(22px, 28px, 28px);
+	line-height: 36px;
+	font-weight: 700;
+
+	@include media('<tablet') {
+		line-height: 24px;
+	}
+}
+
+.is-style-subhead2 {
+	@include font-sizes(20px, 24px, 24px);
+	line-height: 32px;
+	font-weight: 700;
+
+	@include media('<tablet') {
+		line-height: 24px;
+	}
+}
+
+.is-style-subhead3 {
+	@include font-sizes(18px, 20px, 20px);
+	line-height: 36px;
+	font-weight: 700;
+
+	@include media('<tablet') {
+		line-height: 24px;
+	}
+}
+
+/* Blockquote
+--------------------------------------------- */
+
+blockquote,
+blockquote.wp-block-quote {
+	background: none;
+
+	p {
+		color: $base-color;
+		font-style: italic;
+		margin-left: 24px;
+		position: relative;
+		font-size: 20px;
+		font-weight: 300;
+
+		&:before {
+			content: "";
+			display: block;
+			width: 5px;
+			height: 100%;
+			background: brand-color('blue');
+			position: absolute;
+			left: -2%;
+		}
+	}
+
+	cite,
+	.wp-block-quote__citation {
+		color: $base-color;
+		display: block;
+		font-size: 16px;
+		font-weight: 700;
+		margin-top: 12px;
+		opacity: .5;
+		text-transform: uppercase;
+	}
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+
+}
+
+/* Separator
+--------------------------------------------- */
+
+.wp-block-separator,
+hr {
+	background: transparent;
+	border: none;
+	width: 100%;
+	height: 32px;
+	position: relative;
+
+	&::before {
+		background: $border-color;
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		top: 50%;
+		margin-top: -.5px;
+	}
+}
+
+/* Image
+--------------------------------------------- */
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+	&.alignleft {
+		float: left;
+		margin: 0 $block-margin $block-margin 0;
+	}
+
+	&.alignright {
+		float: right;
+		margin: 0 0 $block-margin $block-margin;
+	}
+
+	&.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+.wp-block-image figcaption {
+	color: $grey_7;
+	text-align: left;
+	font-size: 0.85rem;
+	font-style: italic;
+	line-height: 1.5;
+	padding: 0.25rem;
+
+}
+
+/**
+Diagram Style for Images
+*/
+.diagram-modal-button {
+	transition: transform 0.3s ease;
+	border: 0;
+	background-color: transparent;
+	line-height: 0;
+	padding: 0;
+
+	figure {
+		margin: 0;
+	}
+
+	img {
+		transition: transform 0.3s ease;
+	}
+
+	&:hover{
+
+		img{
+			transform: scale(1.025);
+			transition: transform 0.3s ease;
+		}
+	}
+
+	&:focus {
+		outline: 2px dotted black;
+	}
+}
+
+/* Tables
+--------------------------------------------- */
+
+.wp-block-table  {
+
+  border-collapse: collapse;
+  width: 100%;
+
+	td, th {
+		padding: .5em;
+	  border: 1px solid;
+	}
+
+  img.emoji {
+    max-width: 1em;
+  }
+}
+
+/* Color Options
+--------------------------------------------- */
+
+@each $name, $color in $brand_colors {
+
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color;
+	}
+}
+
+/* Group
+--------------------------------------------- */
+
+div.wp-block-group {
+	padding: 40px 16px;
+
+	@include media(">=tablet") {
+		padding: 60px 16px;
+	}
+
+	@include media(">=medium") {
+		padding: 70px 16px;
+	}
+
+	&.is-style-center {
+		text-align: center;
+	}
+
+	.wp-block-group__inner-container {
+		max-width: $grid-width;
+		margin: 0 auto;
+		@include clearfix;
+
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/*
+Columns
+ */
+.wp-block-column {
+
+	@include media('<tablet') {
+		margin-bottom: 1.5em;
+	}
+}
+
+/* Open/Closed Options
+--------------------------------------------- */
+[data-state="open"] {
+  display:inherit;
+  height: 100%;
+  visibility: visible;
+}
+[data-state="closed"] {
+  display:none;
+  height: 0;
+  visibility: hidden;
+}
+
+//@todo document this as a helper class
+.force-content-width {
+	@include media('>=tablet') {
+		max-width: $content-width !important;
+	}
+}
+
+.center-block {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
